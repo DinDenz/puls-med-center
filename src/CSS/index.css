@@ -104,7 +104,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 /*--------var----------------------------------------*/
 :root {
-	--main-color:rgba(150, 0, 0, 0.9);
+	--main-color:rgba(0, 127, 150, 0.9);
 	--main-color-full:rgb(0, 127, 150);
 	--middle-opacity-black-color: rgba(0,0,0,0.7);
 	--low-opacity-black-color: rgba(0,0,0,0.9);
