@@ -1,0 +1,12 @@
+@import url('./Elems_main/slider.css');
+
+.main {
+    flex: 1 1 auto;
+    padding-top: 150px;
+    min-height: 700px;
+}
+@media screen and (max-width: 992px){
+	.main {
+		padding-top: 50px;
+	}
+}

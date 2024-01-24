@@ -1,0 +1,155 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+* {
+	-webkit-tap-highlight-color: transparent;
+	/*открлючить подстветку выделения в режиме разработчика*/
+	/*-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none; 
+	user-select: none; */
+  }
+
+/*------импорты----------------------------------------------------------*/
+
+@import url("./ELEMS_CSS/header.css");
+@import url("./ELEMS_CSS/footer.css");
+@import url("./ELEMS_CSS/main.css");
+
+/*-------шрифты------------------------------------------------------------*/
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../FONTS/Roboto/Roboto-Black.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+  }
+@font-face {
+	font-family: 'Roboto';
+	src: url('../FONTS/Roboto/Roboto-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+  }  
+@font-face {
+	font-family: 'Roboto';
+	src: url('../FONTS/Roboto/Roboto-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+  }
+@font-face {
+	font-family: 'Roboto';
+	src: url('../FONTS/Roboto/Roboto-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+  }  
+  @font-face {
+	font-family: 'Roboto';
+	src: url('../FONTS/Roboto/Roboto-Thin.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+  }  
+.font-roboto-bold {
+	font-family: 'Roboto';
+	font-weight: 700;
+	font-style: normal;
+}
+.font-roboto-medium {
+	font-family: 'Roboto';
+	font-weight: 500;
+	font-style: normal;
+}
+.font-roboto-regular {
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-style: normal;
+}
+.font-roboto-thin {
+	font-family: 'Roboto';
+	font-weight: 200;
+	font-style: normal;
+}
+/*--------var----------------------------------------*/
+:root {
+	--main-color:rgba(0, 127, 150, 0.9);
+	--main-color-full:rgb(0, 127, 150);
+	--middle-opacity-black-color: rgba(0,0,0,0.7);
+	--low-opacity-black-color: rgba(0,0,0,0.9);
+	--colored-button-hover-color :rgb(6, 92, 107);
+  }
+/*------верстка---------------------------------------------------------*/
+.wrapper {
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+	overflow: hidden;
+}
+
+.container {
+	width: 100%;
+	margin:0 auto;
+	padding: 0 20px;
+}
+@media screen and (max-width: 1280px){
+	.container {
+		max-width: 1200px;
+	}
+}
+@media screen and (max-width: 992px){
+	.container {
+		max-width: 872px;
+	}
+}
+@media screen and (max-width: 768px){
+	.container {
+		max-width: 700px;
+	}
+}
+@media screen and (max-width: 576px){
+	.container {
+		max-width: 520px;
+	}
+}
+@media screen and (max-width: 420px) {
+	.container {
+		max-width: 396px;
+	}
+}
+@media screen and (max-width: 320px) {
+	.wrapper {
+		min-width: 300px;
+	}
+}
