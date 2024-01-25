@@ -1,4 +1,5 @@
 @import url('./Elems_main/slider.css');
+@import url('./Elems_main/section-form.css');
 
 .main {
     flex: 1 1 auto;
