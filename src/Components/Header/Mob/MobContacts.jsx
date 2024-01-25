@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import ContactsAll from '../Desktop/ContactsAll';
+import MobContactsDrop from './MobContactsDrop';
 
 export default function MobContacts() {
     const [isMobContOpen, setIsMobContOpen] = useState(false);
@@ -38,7 +38,7 @@ export default function MobContacts() {
             <div ref={dropMobRef} className={`dropdown-menu ${isMobContOpen ? 'show' : ''}`}>
                 <div className='container'>
                     <div className="contacts-head-mob">
-                        <ContactsAll />
+                        <MobContactsDrop />
                     </div>
                 </div>
             </div>
