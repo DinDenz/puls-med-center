@@ -32,7 +32,7 @@
     display: flex;
     flex-direction: column;
 }
-.button {
+.button, .drop-mob-but {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,9 +51,12 @@
     transition: 0.3s;
     cursor: pointer;
 }
-.button:hover {
+.button:hover, .drop-mob-but:hover {
     background-color:var(--colored-button-hover-color);
     color:rgba(255, 255, 255, 1);
+}
+.drop-mob-but {
+    padding: 10px 30px 10px 30px;
 }
 .navigation__row {
     display: flex;
@@ -138,13 +141,18 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 /*-----------------------------------------*/
-.contacts__all {
+.contacts__all, .contacts__all-mob {
     position: relative;
-    padding: 0 0 0 27px;
     flex-shrink: 0;
     flex-wrap: nowrap;
     white-space: nowrap;
     margin-right: 5px;
+}
+.contacts__all {
+    padding: 0 0 0 27px;
+}
+.contacts__all-mob {
+    padding: 0px;
 }
 .contacts__all:before {
     content: ' ';
@@ -161,7 +169,7 @@ input[type="search"]::-webkit-search-decoration {
     margin: 0 0 5px 0;
     position: relative;
 }
-.dropdown__toggle {
+.dropdown__toggle, .dropdown__tel {
     display: inline-block;
     overflow: hidden;
     position: relative;
@@ -171,11 +179,26 @@ input[type="search"]::-webkit-search-decoration {
     transition: all 0.2s;
     font-size: 0.9rem;
 }
-.dropdown__toggle:hover, .dropdown__toggle:focus {
+.dropdown__toggle:hover, .dropdown__toggle:focus,
+.dropdown__tel:hover, .dropdown__tel:focus {
     color: var(var(--main-color-full));
 }
 .dropdown__toggle:hover:after, .dropdown__toggle:focus:after {
     border-color: var(var(--main-color-full)) transparent transparent transparent;
+}
+.dropdown__tel {
+    padding-left: 20px;
+    line-height: 1.5em;
+}
+.dropdown__tel::before {
+    content: ' ';
+    display: inline-block;
+    background-image: url("../../IMG/iconPhone.svg");
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: -2px;
 }
 .dropdown__toggle:after {
     content: '';
@@ -220,7 +243,7 @@ input[type="search"]::-webkit-search-decoration {
     color: var(--main-color-full);
 }
 .contacts__workingtime {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--middle-opacity-black-color);
 }
 
@@ -341,7 +364,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 .logo-mob {
     overflow: hidden;
-    height: 55px;
+    height: 50px;
 }
 .header__tools {
     display: flex;
@@ -349,6 +372,7 @@ input[type="search"]::-webkit-search-decoration {
     margin-left: auto;
     justify-content: flex-end;
     align-items: center;
+    flex-grow: 0;
 }
 .button-mobile .button {
     padding: 13px 15px;
@@ -361,11 +385,11 @@ input[type="search"]::-webkit-search-decoration {
     }
 }
 .search-mobile {
-    height: 54px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 55px;
+    width: 50px;
     cursor: pointer;
 }
 .ico-cont {
@@ -378,8 +402,8 @@ input[type="search"]::-webkit-search-decoration {
     position: absolute;
     top:15px;
     right: 15px;
-    width: 45%;
-    height: 45%;
+    width: 44%;
+    height: 44%;
     fill: var(--main-color-full);
     opacity: 1;
     transition: 0;
@@ -409,7 +433,15 @@ input[type="search"]::-webkit-search-decoration {
     padding: 15px 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+}
+.search-head-mob {
+   justify-content: center; 
+}
+
+.contacts-head-mob {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:15px;
 }
 .field-mob {
     position: relative;
@@ -439,24 +471,26 @@ input[type="search"]::-webkit-search-decoration {
     display: block;
 }
 .toggle {
-    height: 54px;
+    height: 50px;
     display: flex;
     align-items: center;
     width: 55px;
     cursor: pointer;
     color: var(--main-color-full);
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
 }
-.contacts-mobile .toggle:before {
+.contacts-mobile .toggle::before {
     content: ' ';
     display: inline-block;
     background-image: url("../../IMG/iconPhone.svg");
     width: 21px;
     height: 21px;
+    position: relative;
+    top:0px;
 }
 
 /*--------------------------------------------------*/

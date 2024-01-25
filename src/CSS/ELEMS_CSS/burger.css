@@ -1,8 +1,8 @@
 .burger-button {
     display: block;
     position: relative;
-    width: 55px;
-    height: 54px;
+    width: 45px;
+    height: 50px;
     cursor: pointer;
 }
 .burger-button span, 
@@ -12,21 +12,21 @@
     content: '';
     position: absolute;
     left: 15px;
-    top: calc(50% - 2px);
-    width: 25px;
-    height: 3px;
+    top: calc(50% - 0px);
+    width: 22px;
+    height: 2px;
     background-color: var(--main-color-full);
     -webkit-transform-origin: 6px center;
     transform-origin: 6px center;
 }
 .burger-button::after {
-    transform: translateY(10px);
-    -webkit-transform: translateY(10px);
+    transform: translateY(8px);
+    -webkit-transform: translateY(8px);
 
 }
 .burger-button::before {
-    transform: translateY(-10px);
-    -webkit-transform: translateY(-10px);
+    transform: translateY(-8px);
+    -webkit-transform: translateY(-8px);
 
 }
 /*---------------------------------------------*/
@@ -59,7 +59,7 @@
 }
 @keyframes moveBottomLine {
     0% {
-        transform: scale(1) translateY(11px);
+        transform: scale(1) translateY(8px);
     }
     30% {
         transform: scale(1.2) translateY(12px);
@@ -76,7 +76,7 @@
 }
 @keyframes moveTopLine {
     0% {
-        transform: scale(1) translateY(-11px);
+        transform: scale(1) translateY(-8px);
     }
     30% {
         transform: scale(1.2) translateY(-12px);
@@ -133,7 +133,7 @@
         opacity: 0.8;
     }
     100% {
-        transform: scale(1) translateY(10px);
+        transform: scale(1) translateY(8px);
     }
 }
 @keyframes moveTopLineReverse {
@@ -150,7 +150,7 @@
         opacity: 0.8;
     }
     100% {
-        transform: scale(1) translateY(-10px);
+        transform: scale(1) translateY(-8px);
     }
 }
 /*-------------------------------------------------------------*/

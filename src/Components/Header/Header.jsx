@@ -19,7 +19,7 @@ function Header() {
             <div className='header-content__mob'>
                 <div className='container'>
                     <div className="logo-mob">
-                        <Logo image={logoMedCentreMobNobg} width={"68px"} height={"68px"} />
+                        <Logo image={logoMedCentreMobNobg} width={"54px"} height={"54px"} />
                     </div>
                     <MobNavigation />
                 </div>
