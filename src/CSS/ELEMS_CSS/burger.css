@@ -336,12 +336,9 @@
 /*-------------------------------------------*/
 body.modal-open {
     overflow: hidden;
-    padding-right: 17px;
     width: 100%;
   }
-.header.modal-open {
-    padding-right: 17px;
-}
+
 
 
 
