@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import InputPhone from './InputPhone';
 
 export default function SectionForm() {
   return (
@@ -23,8 +24,8 @@ export default function SectionForm() {
                   <option value="Лабораторная диагностика">Лабораторная диагностика</option>
                 </select>
               </div>
-              <div className='form-elem-containter inpt'><input className='form-elem inpt' type="text" name='FIO' placeholder='Ваши ФИО' required /></div>
-              <div className='form-elem-containter inpt'><input className='form-elem inpt' type="tel" name='tel' placeholder='+375 (__) ___ - __ -__' required /></div>
+              <div className='form-elem-containter inpt'><input className='form-elem' type="text" name='FIO' placeholder='Ваши ФИО' required /></div>
+              <div className='form-elem-containter inpt'><InputPhone /></div>
               <div className='form-elem-containter'><input className='form-elem button' type="submit" name='submit' value='Отправить' /></div>
             </form>
           </div>
