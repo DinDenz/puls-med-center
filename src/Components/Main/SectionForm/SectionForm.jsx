@@ -2,6 +2,11 @@ import React from 'react';
 import InputPhone from './InputPhone';
 
 export default function SectionForm() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    //обработка формы
+  };
   return (
     <div className='section-form'>
       <div className='section-form-content'>
@@ -12,10 +17,10 @@ export default function SectionForm() {
         </div>
         <div className='section-form__body'>
           <div className="body__content">
-            <form className='feedback-form' action="#" method="post">
+            <form className='feedback-form' action="#" method="post" onSubmit={handleSubmit}>
               <div className='form-elem-containter'>
                 <select id="select" className='form-elem'>
-                  <option value = "Направления" disabled>Направления</option>
+                  <option value="Направления" disabled>Направления</option>
                   <option value="Кардиология">Кардиология</option>
                   <option value="Детская кардиология">Детская кардиология</option>
                   <option value="Беременным">Беременным</option>

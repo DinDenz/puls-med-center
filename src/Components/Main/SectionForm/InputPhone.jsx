@@ -1,17 +1,16 @@
-import React, {useRef} from 'react';
+import React from 'react';
+import InputMask from 'react-input-mask';
 
 export default function InputPhone() {
-    const phoneRef = useRef();
-    console.log(phoneRef);
+   
 
     return (
-        <input
-            className='form-elem phone-inpt'
-            ref={phoneRef}
-            type="tel"
-            name='tel'
-            placeholder='+375 (__) ___ - __ -__'
-            value=""
-            required />
+        <InputMask 
+        className='form-elem phone-inpt'
+        type="tel"
+        name='tel'
+        maskChar="_"
+        placeholder="+375(__) ___ - __ - __"
+        mask="+375(99) 999 - 99 - 99" />
     )
 }
