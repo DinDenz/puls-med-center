@@ -1,10 +1,26 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
 export default function CustomSelect() {
     const [open, setOpen] = useState(false);
+    const preudoSelectRef = useRef();
+
+    //функционал по открытию-закрытию выпадающего псевдоселекта
     function handleClickOnButton() {
         setOpen(!open);
     }
+    function closingClickOutside(event) {
+        if (preudoSelectRef.current && !preudoSelectRef.current.contains(event.target)) {
+            setOpen(false);
+        }
+    };
+    useEffect(() => {
+        document.addEventListener('mousedown', closingClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', closingClickOutside);
+        };
+    }, [open]);
+
+    
 
     return (
         <>
@@ -19,7 +35,7 @@ export default function CustomSelect() {
             </select>
             <div id="pseudoSelect" className="pseudo-select">
                 <button className='pseudo-select__toggle' onClick={handleClickOnButton}><span>Направления</span></button>
-                <div className={open ? 'pseudo-select__drop' : 'pseudo-select__drop none'}>
+                <div ref={preudoSelectRef} className={open ? 'pseudo-select__drop' : 'pseudo-select__drop none'}>
                     <div className='pseudo-select__item'>Кардиология</div>
                     <div className='pseudo-select__item'>Детская кардиология</div>
                     <div className='pseudo-select__item'>Беременным</div>

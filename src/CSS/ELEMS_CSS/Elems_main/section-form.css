@@ -126,6 +126,7 @@
     height: 200px;
     overflow-y: scroll;
     overflow-x: hidden;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3)
 }
 .pseudo-select__drop.none {
     display: none;
@@ -133,7 +134,7 @@
 .pseudo-select__item{
     display: block;
     position: relative;
-    z-index: 1000;
+    z-index: 100;
     font-size: 0.9rem;
     padding: 18px 35px 18px 15px;
     color:var(--middle-opacity-black-color);
