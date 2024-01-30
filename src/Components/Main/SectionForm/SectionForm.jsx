@@ -1,5 +1,6 @@
 import React from 'react';
 import InputPhone from './InputPhone';
+import CustomSelect from './CustomSelect';
 
 export default function SectionForm() {
   const handleSubmit = (e) => {
@@ -19,19 +20,11 @@ export default function SectionForm() {
           <div className="body__content">
             <form className='feedback-form' action="#" method="post" onSubmit={handleSubmit}>
               <div className='form-elem-containter'>
-                <select id="select" className='form-elem'>
-                  <option value="Направления" disabled>Направления</option>
-                  <option value="Кардиология">Кардиология</option>
-                  <option value="Детская кардиология">Детская кардиология</option>
-                  <option value="Беременным">Беременным</option>
-                  <option value="Ревматология">Ревматология</option>
-                  <option value="Диагностика">Диагностика</option>
-                  <option value="Лабораторная диагностика">Лабораторная диагностика</option>
-                </select>
+                <CustomSelect/>
               </div>
-              <div className='form-elem-containter inpt'><input className='form-elem' type="text" name='FIO' placeholder='Ваши ФИО' required /></div>
-              <div className='form-elem-containter inpt'><InputPhone /></div>
-              <div className='form-elem-containter'><input className='form-elem button' type="submit" name='submit' value='Отправить' /></div>
+              <div className='form-elem-containter--inpt'><input className='form-elem' type="text" name='FIO' placeholder='Ваши ФИО' required maxLength='50'/></div>
+              <div className='form-elem-containter--inpt'><InputPhone /></div>
+              <div className='form-elem-containter--bt'><input className='form-elem button' type="submit" name='submit' value='Отправить' /></div>
             </form>
           </div>
         </div>
