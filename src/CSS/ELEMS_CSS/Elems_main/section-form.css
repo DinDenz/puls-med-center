@@ -33,7 +33,7 @@
     text-align: center;
     margin-bottom: 30px;
 }
-/*----------------------------------------*/
+/*---------------------------------------------------------*/
 .section-form__body {
     width: 100%;
     border: 1px solid white;
@@ -50,7 +50,7 @@
     overflow: hidden;
     border: 1px solid yellow;
 }
-/*---------------------------*/
+/*--------------------------------------------------------*/
 .feedback-form {
     display: flex;
     flex-wrap: wrap;
@@ -140,6 +140,9 @@
     color:var(--middle-opacity-black-color);
     cursor: pointer;
     white-space: nowrap;
+}
+.pseudo-select__item:last-child {
+    padding: 18px 35px 24px 15px;
 }
 .pseudo-select__item:hover {
     color: var(--main-color-full);
