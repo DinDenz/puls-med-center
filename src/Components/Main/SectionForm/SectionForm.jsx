@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useRef,useEffect } from 'react';
 import InputPhone from './InputPhone';
 import CustomSelect from './CustomSelect';
 
 export default function SectionForm() {
+  const formRef = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
 
     //обработка формы
   };
+
   return (
     <div className='section-form'>
       <div className='section-form-content'>
@@ -18,7 +20,7 @@ export default function SectionForm() {
         </div>
         <div className='section-form__body'>
           <div className="body__content">
-            <form className='feedback-form' action="#" method="post" onSubmit={handleSubmit}>
+            <form ref={formRef}  className='feedback-form' action="#" method="post" onSubmit={handleSubmit}>
               <div className='form-elem-containter'>
                 <CustomSelect/>
               </div>

@@ -23,7 +23,7 @@ export default function CustomSelect() {
             document.removeEventListener('mousedown', closingClickOutside);
         };
     }, [open]);
-
+    /*--------------------------------------------------------------------------------*/
     //функционал по назначению измени спана в кнопке по выбранному селекту
     useEffect(() => {
         (selectedValue != defaultValue) ? spanRef.current.style.opacity = "1" :
@@ -36,10 +36,21 @@ export default function CustomSelect() {
         setSelectedValue(ev.textContent);
         setOpen(false);
     }
+    /*--------------------------------------------------------------------------------*/
+    //функционал по передаче значения в реал-селект 
+    useEffect(() => {
+        const realSelect = document.querySelector(".real-select");
+        for (let option of realSelect.options) {
+            (option.value === selectedValue) ? (option.selected = true) :
+                (option.selected = false);
+        }
+        console.log(realSelect.value)
+    }, [selectedValue])
+
 
     return (
         <>
-            <select id="select" className='real-select'>
+            <select name="select" className='real-select'>
                 <option value="Направления" disabled>Направления</option>
                 <option value="Кардиология">Кардиология</option>
                 <option value="Детская кардиология">Детская кардиология</option>
