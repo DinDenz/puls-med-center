@@ -4,28 +4,59 @@ import CustomSelect from './CustomSelect';
 import InputFio from './InputFio';
 
 export default function SectionForm() {
-  const formRef = useRef();
-  /*const [isSelectValid, setIsSelectValid] = useState('');
-  const [isTelValid, setIsTelValid] = useState();
-  const [isFioValid, setIsFioValid] = useState();*/
+  const formRef = useRef(); //форма
+  const [isFioValid, setIsFioValid] = useState(true);//валидность ФИО
+  const [isTelValid, setIsTelValid] = useState(true);//валидность телефона
+  const [isSelectValid, setIsSelectValid] = useState(true);//валидность селекта
+  const [isFormValid, setIsFormValid] = useState(true);//валидность формы 
+  //inputFio  
+  const fioRef = useRef();
+  //inputTel 
+  const telRef = useRef();
+  //customSelect
+  const spanRef = useRef();
+  const defaultValue = "Направления";
+  const [selectedValue, setSelectedValue] = useState(defaultValue);//отображается в псевдоселекте как выбранное
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    /*if(select,value = = defaultvalue || ) подсветить селект
-    аналогичено провеирь другие
-    надо прокидывать пропсы сверху на компоненты*/
-    //тут есть вопросы
-    //условие написал так как онсабмит происходил при каждом изменении значения поля формы
-    //так он проиходит только при клике на сабмит
+    if (e.nativeEvent.submitter.name !== 'submit') return   //условие написал так как онсабмит происходил при каждом изменении значения поля формы, a так он проиходит только при клике на сабмит
+    //"обнуляю" стэйты полей, чтобы для тех полей,где значение исправлено на валидное,после экспентирования не оставалась подсветка  
+    setIsSelectValid(true);
+    setIsFioValid(true);
+    setIsTelValid(true);
+    const form = e.target;
+    const formData = new FormData(form);
+    const napravlenie = formData.get('Napravlenie'); //получаем значение ключа напраление в конст направление
+    const fio = formData.get('FIO');
+    const tel = formData.get('tel');
+    const isValid = validateFormData(napravlenie, fio, tel);
+    setIsFormValid(isValid);
 
-    if (e.nativeEvent.submitter.name === 'submit') {
-      const form = e.target;
-      const formData = new FormData(form);
-      for (let [name, value] of formData.entries()) {
-        console.log(name, value);
+    function validateFormData(napravlenie, fio, tel) {
+      // проверка правильности заполнения полей в общем и индивидуально
+      const telRegExp = /^\+375\(\d{2}\) \d{3} - \d{2} - \d{2}$/;
+      /*console.log(tel.includes("_") ? 'true' : 'false')*/ //еще один способ проверить строку на пробелы
+      if (napravlenie == defaultValue ||
+        (!fio || fio.length < 3) ||
+        (!tel || (tel.length === 22 && !telRegExp.test(tel)))) {
+
+        if (napravlenie == defaultValue) setIsSelectValid(false);
+        if (!fio || fio.length < 3) setIsFioValid(false);
+        if (!tel || !telRegExp.test(tel)) setIsTelValid(false);
+        return false;
       }
+
+      return true;
+    };
+    if (isValid) {
+      for (let [name, value] of formData) {
+        console.log(`${name} = ${value}`);
+      }//типа Отправка данных
     }
+
   };
+
 
   return (
     <div className='section-form'>
@@ -43,11 +74,11 @@ export default function SectionForm() {
               onSubmit={handleSubmit}
               onKeyDown={(e) => (e.key === 'Enter') ? e.preventDefault() : ''}// это написал так как при нажатии на enter срабатвало событие из кнопки в псевдоселекте
               encType="multipart/form-data">
-              <div className='form-elem-containter'>
-                <CustomSelect />
+              <div className={`form-elem-containter ${!isSelectValid && 'invalid'}`}>
+                <CustomSelect defaultValue={defaultValue} selectedValue={selectedValue} setSelectedValue={setSelectedValue} spanRef={spanRef} />
               </div>
-              <div className='form-elem-containter--inpt'><InputFio /></div>
-              <div className='form-elem-containter--inpt'><InputPhone /></div>
+              <div className={`form-elem-containter--inpt ${!isFioValid && 'invalid'}`}><InputFio fioRef={fioRef} /></div>
+              <div className={`form-elem-containter--inpt ${!isTelValid && 'invalid'}`}><InputPhone telRef={telRef} /></div>
               <div className='form-elem-containter--bt'><input className='form-elem button' type="submit" name='submit' value='Отправить' /></div>
             </form>
           </div>

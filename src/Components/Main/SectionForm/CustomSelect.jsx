@@ -1,12 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useOpen } from '../../hooks/useOpen';
 
-export default function CustomSelect() {
+export default function CustomSelect({defaultValue,selectedValue,setSelectedValue, spanRef}) {
     const { open, setOpen, ref, dropRef, toggleDrop } = useOpen(); //функционал по открытию-закрытию выпадающего псевдоселекта
-
-    const defaultValue = "Направления";
-    const [selectedValue, setSelectedValue] = useState(defaultValue);//отображается в псевдоселекте как выбранное
-    const spanRef = useRef();
 
     //функционал по назначению измени спана в кнопке по выбранному селекту
     useEffect(() => {
