@@ -180,22 +180,27 @@
     font-size: 1.2rem;
 }
 .invalid{
-    box-shadow: inset 0px 0px 8px rgba(194, 28, 28, 0.74);
     position: relative;
+    /*border-top: 1px solid red;
+    border-bottom: 1px solid red;*/
   }
 .invalid::after {
-    content: 'Ошибка ввода';
+    content: '?';
     display: block;
     position: absolute;
-    top: 110%;
-    left:50%;
-    transform: translateX(-50%);
-    color:rgba(194, 28, 28, 0.74);;
-    font-size: 0.8rem;
-    font-weight: 700;
-    animation: blurerror forwards 3s;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform:translateY(-50%);
+    -moz-transform: translateX(-50%);
+    left:82%;
+    color:rgba(194, 28, 28, 0.6);;
+    font-size: 1.5rem;
+    font-weight: 500;
+    /*animation: blurerror infinite 3s;*/
     user-select: none;
 }  
+
+
 @keyframes blurerror {
     0% {opacity: 1}
     90% {opacity: 0.9}

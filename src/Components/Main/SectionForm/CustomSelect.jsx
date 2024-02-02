@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useOpen } from '../../hooks/useOpen';
 
-export default function CustomSelect({isSelectValid,defaultValue,selectedValue,setSelectedValue, spanRef}) {
+export default function CustomSelect({setIsSelectValid,isSelectValid,defaultValue,selectedValue,setSelectedValue, spanRef}) {
     const { open, setOpen, ref, dropRef, toggleDrop } = useOpen(); //функционал по открытию-закрытию выпадающего псевдоселекта
 
     //функционал по назначению измени спана в кнопке по выбранному селекту
@@ -25,9 +25,11 @@ export default function CustomSelect({isSelectValid,defaultValue,selectedValue,s
             (option.value === selectedValue) ? (option.selected = true) :
                 (option.selected = false);
         }
-        console.log(realSelect.value)
     }, [selectedValue])
     /*----------------------------------------------------------------------------*/
+    useEffect(() => {
+        setIsSelectValid(true);
+    }, [selectedValue]);
 
     return (
         <>

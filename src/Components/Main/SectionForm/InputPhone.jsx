@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import InputMask from 'react-input-mask';
 
-export default function InputPhone({telRef}) {
+export default function InputPhone({ telRef,setIsTelValid }) {
     const [inputValue, setInputValue] = useState('');
 
     function handleChange(e) {
         setInputValue(e.target.value);
     }
+    useEffect(() => {
+        setIsTelValid(true);
+    }, [inputValue]);
+
     return (
         <>
             <InputMask
+                ref={telRef}
                 onChange={handleChange}
                 value={inputValue}
                 className='form-elem phone-inpt'

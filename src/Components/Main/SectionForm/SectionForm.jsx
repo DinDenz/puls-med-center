@@ -56,8 +56,6 @@ export default function SectionForm() {
     }
 
   };
-
-
   return (
     <div className='section-form'>
       <div className='section-form-content'>
@@ -75,10 +73,10 @@ export default function SectionForm() {
               onKeyDown={(e) => (e.key === 'Enter') ? e.preventDefault() : ''}// это написал так как при нажатии на enter срабатвало событие из кнопки в псевдоселекте
               encType="multipart/form-data">
               <div className='form-elem-containter'>
-                <CustomSelect isSelectValid={isSelectValid} defaultValue={defaultValue} selectedValue={selectedValue} setSelectedValue={setSelectedValue} spanRef={spanRef} />
+                <CustomSelect isSelectValid={isSelectValid} defaultValue={defaultValue} selectedValue={selectedValue} setSelectedValue={setSelectedValue} spanRef={spanRef} setIsSelectValid={setIsSelectValid} />
               </div>
-              <div className={`form-elem-containter--inpt ${!isFioValid && 'invalid'}`}><InputFio fioRef={fioRef} /></div>
-              <div className={`form-elem-containter--inpt ${!isTelValid && 'invalid'}`}><InputPhone telRef={telRef} /></div>
+              <div className={`form-elem-containter--inpt ${!isFioValid && 'invalid'}`}><InputFio fioRef={fioRef} setIsFioValid={setIsFioValid} /></div>
+              <div className={`form-elem-containter--inpt ${!isTelValid && 'invalid'}`}><InputPhone telRef={telRef} setIsTelValid={setIsTelValid} /></div>
               <div className='form-elem-containter--bt'><input className='form-elem button' type="submit" name='submit' value='Отправить' /></div>
             </form>
           </div>
