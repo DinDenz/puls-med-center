@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import InputPhone from './InputPhone';
 import CustomSelect from './CustomSelect';
+import InputFio from './InputFio';
 
 export default function SectionForm() {
   const formRef = useRef();
@@ -43,9 +44,9 @@ export default function SectionForm() {
               onKeyDown={(e) => (e.key === 'Enter') ? e.preventDefault() : ''}// это написал так как при нажатии на enter срабатвало событие из кнопки в псевдоселекте
               encType="multipart/form-data">
               <div className='form-elem-containter'>
-                <CustomSelect name="CustomSelect"/>
+                <CustomSelect name="CustomSelect" />
               </div>
-              <div className='form-elem-containter--inpt'><input className='form-elem' type="text" name='FIO' placeholder='Ваши ФИО' required maxLength='50' /></div>
+              <div className='form-elem-containter--inpt'><InputFio /></div>
               <div className='form-elem-containter--inpt'><InputPhone name="InputPhone" /></div>
               <div className='form-elem-containter--bt'><input className='form-elem button' type="submit" name='submit' value='Отправить' /></div>
             </form>
