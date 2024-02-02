@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useOpen } from '../../hooks/useOpen';
 
-export default function CustomSelect({defaultValue,selectedValue,setSelectedValue, spanRef}) {
+export default function CustomSelect({isSelectValid,defaultValue,selectedValue,setSelectedValue, spanRef}) {
     const { open, setOpen, ref, dropRef, toggleDrop } = useOpen(); //функционал по открытию-закрытию выпадающего псевдоселекта
 
     //функционал по назначению измени спана в кнопке по выбранному селекту
@@ -40,7 +40,7 @@ export default function CustomSelect({defaultValue,selectedValue,setSelectedValu
                 <option value="Диагностика">Диагностика</option>
                 <option value="Лабораторная диагностика">Лабораторная диагностика</option>
             </select>
-            <div id="pseudoSelect" className="pseudo-select" ref={ref}>
+            <div id="pseudoSelect" className={`pseudo-select ${!isSelectValid && 'invalid'}`} ref={ref}>
                 <button onClick={toggleDrop}
                     className='pseudo-select__toggle'><span ref={spanRef}>{selectedValue}</span></button>
                 <div ref={dropRef}
