@@ -53,7 +53,28 @@ export default function SectionForm() {
       for (let [name, value] of formData) {
         console.log(`${name} = ${value}`);
       }//типа Отправка данных
+      /*fetch('url', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {//обрабатываем данные при успешной отправке
+            return response.json();
+        } else {//создаем ошибку при неуспешной отправке
+            throw new Error('Ошибка отправки формы');
+        }
+    })
+    .then(data => {//обработка успеха
+        console.log('Данные успешно отправлены:', data);
+    })
+    .catch(error => {//обработка ошибки
+        console.error('Произошла ошибка:', error);
+    });
+}
+*/
+
     }
+
 
   };
   return (
