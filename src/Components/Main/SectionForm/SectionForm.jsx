@@ -1,20 +1,30 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import InputPhone from './InputPhone';
 import CustomSelect from './CustomSelect';
 
 export default function SectionForm() {
   const formRef = useRef();
+  /*const [isSelectValid, setIsSelectValid] = useState('');
+  const [isTelValid, setIsTelValid] = useState();
+  const [isFioValid, setIsFioValid] = useState();*/
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    /*if(select,value = = defaultvalue || ) подсветить селект
+    аналогичено провеирь другие
+    надо прокидывать пропсы сверху на компоненты
+    //тут есть вопросы
+    //условие написал так как онсабмит происходил при каждом изменении значения поля формы
+    //так он проиходит только при клике на сабмит
+
     if (e.nativeEvent.submitter.name === 'submit') {
       const form = e.target;
       const formData = new FormData(form);
       for (let [name, value] of formData.entries()) {
         console.log(name, value);
       }
-    }
+    }*/
   };
-
 
   return (
     <div className='section-form'>
@@ -26,9 +36,14 @@ export default function SectionForm() {
         </div>
         <div className='section-form__body'>
           <div className="body__content">
-            <form ref={formRef} className='feedback-form' action="#" method="post" onSubmit={handleSubmit} encType="multipart/form-data">
+            <form ref={formRef}
+              className='feedback-form'
+              action="#" method="post"
+              onSubmit={handleSubmit}
+              onKeyDown={(e) => (e.key === 'Enter') ? e.preventDefault() : ''}// это написал так как при нажатии на enter срабатвало событие из кнопки в псевдоселекте
+              encType="multipart/form-data">
               <div className='form-elem-containter'>
-                <CustomSelect name="CustomSelect" />
+                <CustomSelect name="CustomSelect"/>
               </div>
               <div className='form-elem-containter--inpt'><input className='form-elem' type="text" name='FIO' placeholder='Ваши ФИО' required maxLength='50' /></div>
               <div className='form-elem-containter--inpt'><InputPhone name="InputPhone" /></div>
@@ -41,4 +56,3 @@ export default function SectionForm() {
     </div>
   )
 }
-

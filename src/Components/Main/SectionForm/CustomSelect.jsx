@@ -9,7 +9,7 @@ export default function CustomSelect() {
     const spanRef = useRef();
 
     //функционал по открытию-закрытию выпадающего псевдоселекта
-    function handleClickOnButton() {
+    function handleClickOnButton(e) {
         setOpen(!open);
     }
     function closingClickOutside(event) {
@@ -33,6 +33,7 @@ export default function CustomSelect() {
     function handleClickOnPsSelDrop(event) {
         const ev = event.target;
         if (ev.className !== "pseudo-select__item") return;
+        if (ev.textContent === "Направления") return;
         setSelectedValue(ev.textContent);
         setOpen(false);
     }
@@ -46,12 +47,12 @@ export default function CustomSelect() {
         }
         console.log(realSelect.value)
     }, [selectedValue])
-
+    /*----------------------------------------------------------------------------*/
 
     return (
         <>
             <select name="select" className='real-select'>
-                <option value="Направления" disabled>Направления</option>
+                <option value="Направления">Направления</option>
                 <option value="Кардиология">Кардиология</option>
                 <option value="Детская кардиология">Детская кардиология</option>
                 <option value="Беременным">Беременным</option>
@@ -60,10 +61,12 @@ export default function CustomSelect() {
                 <option value="Лабораторная диагностика">Лабораторная диагностика</option>
             </select>
             <div id="pseudoSelect" className="pseudo-select">
-                <button onClick={handleClickOnButton} className='pseudo-select__toggle'><span ref={spanRef}>{selectedValue}</span></button>
+                <button onClick={handleClickOnButton}
+                    className='pseudo-select__toggle'><span ref={spanRef}>{selectedValue}</span></button>
                 <div ref={pseudoSelectRef}
                     onClick={handleClickOnPsSelDrop}
                     className={open ? 'pseudo-select__drop' : 'pseudo-select__drop none'}>
+                    <div className='pseudo-select__item'>Направления</div>
                     <div className='pseudo-select__item'>Кардиология</div>
                     <div className='pseudo-select__item'>Детская кардиология</div>
                     <div className='pseudo-select__item'>Беременным</div>
