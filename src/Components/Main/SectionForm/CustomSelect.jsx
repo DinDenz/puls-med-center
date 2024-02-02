@@ -1,29 +1,13 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useRef } from 'react';
+import { useOpen } from '../../hooks/useOpen';
 
 export default function CustomSelect() {
-    const [open, setOpen] = useState(false);
-    const pseudoSelectRef = useRef();
+    const { open, setOpen, ref, dropRef, toggleDrop } = useOpen(); //функционал по открытию-закрытию выпадающего псевдоселекта
 
     const defaultValue = "Направления";
     const [selectedValue, setSelectedValue] = useState(defaultValue);//отображается в псевдоселекте как выбранное
     const spanRef = useRef();
 
-    //функционал по открытию-закрытию выпадающего псевдоселекта
-    function handleClickOnButton(e) {
-        setOpen(!open);
-    }
-    function closingClickOutside(event) {
-        if (pseudoSelectRef.current && !event.target.closest('.pseudo-select')) {
-            setOpen(false);
-        }
-    }
-    useEffect(() => {
-        document.addEventListener('mousedown', closingClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', closingClickOutside);
-        };
-    }, [open]);
-    /*--------------------------------------------------------------------------------*/
     //функционал по назначению измени спана в кнопке по выбранному селекту
     useEffect(() => {
         (selectedValue != defaultValue) ? spanRef.current.style.opacity = "1" :
@@ -60,10 +44,10 @@ export default function CustomSelect() {
                 <option value="Диагностика">Диагностика</option>
                 <option value="Лабораторная диагностика">Лабораторная диагностика</option>
             </select>
-            <div id="pseudoSelect" className="pseudo-select">
-                <button onClick={handleClickOnButton}
+            <div id="pseudoSelect" className="pseudo-select" ref={ref}>
+                <button onClick={toggleDrop}
                     className='pseudo-select__toggle'><span ref={spanRef}>{selectedValue}</span></button>
-                <div ref={pseudoSelectRef}
+                <div ref={dropRef}
                     onClick={handleClickOnPsSelDrop}
                     className={open ? 'pseudo-select__drop' : 'pseudo-select__drop none'}>
                     <div className='pseudo-select__item'>Направления</div>
