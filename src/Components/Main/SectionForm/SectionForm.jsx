@@ -13,7 +13,7 @@ export default function SectionForm() {
     e.preventDefault();
     /*if(select,value = = defaultvalue || ) подсветить селект
     аналогичено провеирь другие
-    надо прокидывать пропсы сверху на компоненты
+    надо прокидывать пропсы сверху на компоненты*/
     //тут есть вопросы
     //условие написал так как онсабмит происходил при каждом изменении значения поля формы
     //так он проиходит только при клике на сабмит
@@ -24,7 +24,7 @@ export default function SectionForm() {
       for (let [name, value] of formData.entries()) {
         console.log(name, value);
       }
-    }*/
+    }
   };
 
   return (
@@ -44,10 +44,10 @@ export default function SectionForm() {
               onKeyDown={(e) => (e.key === 'Enter') ? e.preventDefault() : ''}// это написал так как при нажатии на enter срабатвало событие из кнопки в псевдоселекте
               encType="multipart/form-data">
               <div className='form-elem-containter'>
-                <CustomSelect name="CustomSelect" />
+                <CustomSelect />
               </div>
               <div className='form-elem-containter--inpt'><InputFio /></div>
-              <div className='form-elem-containter--inpt'><InputPhone name="InputPhone" /></div>
+              <div className='form-elem-containter--inpt'><InputPhone /></div>
               <div className='form-elem-containter--bt'><input className='form-elem button' type="submit" name='submit' value='Отправить' /></div>
             </form>
           </div>

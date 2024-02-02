@@ -35,7 +35,7 @@ export default function CustomSelect() {
 
     return (
         <>
-            <select name="select" className='real-select'>
+            <select name="Napravlenie" className='real-select'>
                 <option value="Направления">Направления</option>
                 <option value="Кардиология">Кардиология</option>
                 <option value="Детская кардиология">Детская кардиология</option>
