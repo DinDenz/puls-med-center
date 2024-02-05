@@ -1,7 +1,8 @@
 .wrap {
     position: relative;
-    min-width: 120%;
+    width: 120%;
     left: -10%;
+    overflow: hidden;
     height: 515px;
 }
 .slider {
@@ -16,6 +17,7 @@
 		height: 400px;
 	}
 }
+
 /* Лента слайдов */
 .slick-track{
     display: flex;
@@ -65,6 +67,38 @@
 .slider .slick-arrow.slick-prev:focus .prev_arrow,
 .slider .slick-arrow.slick-next:focus .next_arrow {
     fill: white;
+}
+@media screen and (min-width: 1400px){
+	.slider .slick-arrow.slick-prev{
+    left: 13%;
+}
+.slider .slick-arrow.slick-next{
+    right: 13%;
+}
+}
+@media screen and (min-width: 1580px){
+	.slider .slick-arrow.slick-prev{
+    left: 15%;
+}
+.slider .slick-arrow.slick-next{
+    right: 15%;
+}
+}
+@media screen and (min-width: 1680px){
+	.slider .slick-arrow.slick-prev{
+    left: 17%;
+}
+.slider .slick-arrow.slick-next{
+    right: 17%;
+}
+}
+@media screen and (min-width: 1780px){
+	.slider .slick-arrow.slick-prev{
+    left: 19%;
+}
+.slider .slick-arrow.slick-next{
+    right: 19%;
+}
 }
 @media screen and (max-width: 768px){
     .slider .slick-arrow {
@@ -117,8 +151,9 @@
 .container.infoslide {
     display: flex;
     align-items: center;
-    width: 72%;
     height: 100%;
+    width: 76%;
+    max-width: 1280px;
 }
 
 .inner-info {
@@ -159,11 +194,11 @@
         width: 76%;
     }
     .slider .slick-arrow.slick-prev{
-        left: 10%;
+        left: 12%;
     }
     
     .slider .slick-arrow.slick-next{
-        right: 10%;
+        right: 12%;
     }
     .inner-info {
         padding: 25px 30px;
@@ -184,9 +219,6 @@
         padding: 10px;
         height: 320px;
         width: 480px;
-    }
-    .container.infoslide {
-        width: 76%;
     }
     .inner-info .title {
         margin: 0 0 20px 0;
