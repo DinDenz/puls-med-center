@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useOpen } from '../../hooks/useOpen';
 
-export default function CustomSelect({setIsSelectValid,isSelectValid,defaultValue,selectedValue,setSelectedValue, spanRef}) {
+export default function CustomSelect({ setIsSelectValid, isSelectValid, defaultValue, selectedValue, setSelectedValue, spanRef }) {
     const { open, setOpen, ref, dropRef, toggleDrop } = useOpen(); //функционал по открытию-закрытию выпадающего псевдоселекта
 
     //функционал по назначению измени спана в кнопке по выбранному селекту
@@ -32,7 +32,7 @@ export default function CustomSelect({setIsSelectValid,isSelectValid,defaultValu
     }, [selectedValue]);
 
     return (
-        <>
+        <div className={`form-elem-containter ${open ? 'openbord' : ''} ${!isSelectValid && 'invalid'}`}>
             <select name="Napravlenie" className='real-select'>
                 <option value="Направления">Направления</option>
                 <option value="Кардиология">Кардиология</option>
@@ -42,12 +42,12 @@ export default function CustomSelect({setIsSelectValid,isSelectValid,defaultValu
                 <option value="Диагностика">Диагностика</option>
                 <option value="Лабораторная диагностика">Лабораторная диагностика</option>
             </select>
-            <div id="pseudoSelect" className={`pseudo-select ${!isSelectValid && 'invalid'}`} ref={ref}>
+            <div id="pseudoSelect" className="pseudo-select" ref={ref}>
                 <button onClick={toggleDrop}
                     className='pseudo-select__toggle'><span ref={spanRef}>{selectedValue}</span></button>
                 <div ref={dropRef}
                     onClick={handleClickOnPsSelDrop}
-                    className={open ? 'pseudo-select__drop' : 'pseudo-select__drop none'}>
+                    className={open ? 'pseudo-select__drop yes' : 'pseudo-select__drop none'}>
                     <div className='pseudo-select__item'>Направления</div>
                     <div className='pseudo-select__item'>Кардиология</div>
                     <div className='pseudo-select__item'>Детская кардиология</div>
@@ -57,7 +57,7 @@ export default function CustomSelect({setIsSelectValid,isSelectValid,defaultValu
                     <div className='pseudo-select__item'>Лабораторная диагностика</div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
     // общая функция для обработки клика на псевдоселекте
