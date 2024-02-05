@@ -34,6 +34,7 @@ export default function SliderSlick() {
     /* const images = [img1, img2, img3, img4];*/
     const images = [
         {
+            id: 1,
             img: img1,
             title: "Ночью дешевле МРТ 24/7!",
             subtitle: "Скидка 20% с 22.00 до 06.00",
@@ -41,6 +42,7 @@ export default function SliderSlick() {
             text2: "акция - скидка на ночное МРТ"
         },
         {
+            id: 2,
             img: img2,
             title: "Акция! Внимание!",
             subtitle: "Комплекс обследований",
@@ -48,6 +50,7 @@ export default function SliderSlick() {
             text: "Включает консультацию врача, ЭКГ, ЭХО-КГ, анализы"
         },
         {
+            id: 3,
             img: img3,
             title: "Справка в школу",
             subtitle: "или детский сад",
@@ -55,6 +58,7 @@ export default function SliderSlick() {
             text: "Коплексное обследование детей и взрослых"
         },
         {
+            id: 4,
             img: img4,
             title: "Обследование и лечение",
             subtitle: "беременных",
@@ -85,18 +89,18 @@ export default function SliderSlick() {
         <div className='wrap'>
             <Slider {...settings} className="slider">
                 {images.map((image, index) => (
-                    <>
-                        <img key={index}
+                    <React.Fragment key={image.id}>
+                        <img
                             className="slider__item"
                             src={image.img} alt={`picture ${index + 1}`} />
                         <div className="container infoslide">
                             <div className="inner-info">
                                 <div className="title font-roboto-bold">{image.title}<br />{image.subtitle}<br />{image.subtitle2}</div>
-                                <p className="text">{image.text},<br/>{image.text2}</p>
+                                <p className="text">{image.text},<br />{image.text2}</p>
                                 <div className="button">подробнее</div>
                             </div>
                         </div>
-                    </>
+                    </React.Fragment>
                 ))}
             </Slider>
         </div>

@@ -8,6 +8,7 @@
     top:0;
     width: 100%;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
+    justify-content: center;
 }
 .header-content__desktop {
     align-self: center;

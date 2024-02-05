@@ -104,11 +104,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 /*--------var----------------------------------------*/
 :root {
-	--main-color:rgba(0, 127, 150, 0.9);
-	--main-color-full:rgb(0, 127, 150);
+	--main-color:rgba(20, 185, 215, 0.9);
+	--main-color-full:rgb(10, 171, 196);
 	--middle-opacity-black-color: rgba(0,0,0,0.7);
 	--low-opacity-black-color: rgba(0,0,0,0.9);
-	--colored-button-hover-color :rgb(6, 92, 107);
+	--colored-button-hover-color :rgb(6, 144, 165);
   }
 /*------верстка---------------------------------------------------------*/
 .wrapper {
@@ -121,11 +121,23 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .container {
 	width: 100%;
 	margin:0 auto;
-	padding: 0 10px;
+	padding: 0 15px;
+}
+@media screen and (min-width: 1281px){
+	.container {
+		max-width: 1920px;
+	}
+	.header .container {
+		max-width: 1280px;
+	}
+	.footer .container {
+		max-width: 1280px;
+	}
+	
 }
 @media screen and (max-width: 1280px){
 	.container {
-		max-width: 1200px;
+		max-width: 1250px;
 	}
 }
 @media screen and (max-width: 992px){
@@ -148,7 +160,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 		max-width: 396px;
 	}
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 325px) {
 	.wrapper {
 		min-width: 325px;
 	}
