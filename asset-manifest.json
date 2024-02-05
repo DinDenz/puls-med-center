@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/puls-med-center/static/css/main.69419579.css",
-    "main.js": "/puls-med-center/static/js/main.e5fbdeb9.js",
+    "main.css": "/puls-med-center/static/css/main.f2276a99.css",
+    "main.js": "/puls-med-center/static/js/main.fa8b3494.js",
     "static/media/img2.jpg": "/puls-med-center/static/media/img2.e0824c4ecce194ac3ca9.jpg",
     "static/media/img4.jpg": "/puls-med-center/static/media/img4.38035567df6caab2f835.jpg",
     "static/media/img3.jpg": "/puls-med-center/static/media/img3.dca7527c32761b342f80.jpg",
@@ -19,11 +19,11 @@
     "static/media/iconSearch.svg": "/puls-med-center/static/media/iconSearch.b9f5f354d89b24898b72956815529459.svg",
     "index.html": "/puls-med-center/index.html",
     "static/media/left_arrow.svg": "/puls-med-center/static/media/left_arrow.a13232effa9015e83a8f3bcd8290cca2.svg",
-    "main.69419579.css.map": "/puls-med-center/static/css/main.69419579.css.map",
-    "main.e5fbdeb9.js.map": "/puls-med-center/static/js/main.e5fbdeb9.js.map"
+    "main.f2276a99.css.map": "/puls-med-center/static/css/main.f2276a99.css.map",
+    "main.fa8b3494.js.map": "/puls-med-center/static/js/main.fa8b3494.js.map"
   },
   "entrypoints": [
-    "static/css/main.69419579.css",
-    "static/js/main.e5fbdeb9.js"
+    "static/css/main.f2276a99.css",
+    "static/js/main.fa8b3494.js"
   ]
 }
