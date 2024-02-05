@@ -12,11 +12,9 @@
     padding: 20px 25px;
     min-width: 860px;
     margin: auto;
-    border: 1px solid blue;
 }
 .section-form__head {
     width: 100%;
-    border: 1px solid red;
 }
 .head__title {
     color: white;
@@ -38,7 +36,6 @@
 /*---------------------------------------------------------*/
 .section-form__body {
     width: 100%;
-    border: 1px solid white;
     padding: 10px;
 }
 .body__content {
@@ -190,11 +187,19 @@
     -webkit-transform:translateY(-50%);
     -moz-transform: translateX(-50%);
     right:5%;
-    color:rgba(194, 28, 28, 0.6);;
+    color:rgba(194, 28, 28, 0.7);
     font-size: 1.5rem;
     font-weight: 500;
     user-select: none;
 }  
+.invalid>input, .invalid>input::placeholder {
+    color: rgba(194, 28, 28, 0.8);
+    transition: 0.15s;
+}
+.invalid button>span {
+    color: rgba(194, 28, 28, 0.8);
+    transition: 0.15s;
+}
 /*------------------------------------------------*/
 @media screen and (max-width: 860px){
 	.section-form-content  {
@@ -243,7 +248,7 @@
 	}
     .form-elem-containter.invalid, .form-elem-containter--bt.invalid, 
     .form-elem-containter--inpt.invalid {
-        border: 1px solid red;
+        border: 1px solid rgba(194, 28, 28, 1);
     }
     .form-elem-containter.openbord {
         border-radius: 25px 25px 0 0;
