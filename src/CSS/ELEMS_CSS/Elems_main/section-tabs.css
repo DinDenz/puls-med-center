@@ -1,9 +1,6 @@
 .section-tabs {
-    background-color: rgba(141, 226, 43, 0.452);
-    padding: 30px 0;
+    padding: 30px 10px;
     position: relative;
-    width: 120%;
-    left: -10%;
 }
 .section-tabs__content{
     display: block;
@@ -16,7 +13,7 @@
 .tabs-head__title {
     font-size: 2.6rem;
     letter-spacing: 2px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 .tabs-body__nav{
 
@@ -31,7 +28,7 @@
     flex-direction: row;
     overflow-x: auto;
     overflow-y: hidden;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 .nav-list li {
     margin-right: 20px;
@@ -65,7 +62,7 @@
     border: 1px solid #e0e0e0;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
     text-decoration: none;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -100,4 +97,34 @@
 }
 .subs {
     white-space: wrap;
+}
+@media screen and (max-width: 992px) {
+    .tab-item {
+        flex: 0 0 33.3%;
+        max-width: 33.3%;
+    }
+    .tabs-head__title {
+        font-size: 2.3rem;
+    }
+    .nav-list li a {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 796px) {
+    .tab-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+}
+    .tabs-head__title {
+        font-size: 2rem;
+}
+}
+@media screen and (max-width: 576px) {
+    .tab-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .tabs-head__title {
+        font-size: 1.8rem;
+}
 }
