@@ -16,10 +16,10 @@ export default function TabsNapravleniya() {
             {napr.map((item) => (
                 <div className="tab-item" key={item.id}>
                     <a href="#" className="tab-item-card">
-                        <div className="pic-box">
-                            <img className="pic" src={item.pic} alt="pic" />
-                        </div>
-                        <div className='subs'>{item.title}</div>
+                            <div className="pic-box">
+                                <img className="pic" src={item.pic} alt="pic" />
+                            </div>
+                            <div className='subs'>{item.title}</div>
                     </a>
                 </div>
             ))}

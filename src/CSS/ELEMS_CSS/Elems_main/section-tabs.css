@@ -54,18 +54,20 @@
 .tab-item {
     flex: 0 0 25%;
     padding: 0 10px;
+    margin-bottom: 20px;
+    max-width: 25%;
 }
 .tab-item-card {
     display: block;
     width: 100%;
     border: 1px solid #e0e0e0;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     transition: all 0.3s ease;
     cursor: pointer;
     padding: 20px 15px;
-    background-color: bisque;
     color:black;
     font-size:1.1rem;
     text-align: center;
@@ -95,5 +97,5 @@
     margin: 0 auto;
 }
 .subs {
-
+    white-space: nowrap;
 }
