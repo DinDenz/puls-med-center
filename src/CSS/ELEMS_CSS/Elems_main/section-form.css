@@ -1,12 +1,24 @@
 .section-form {
-    background-color:var(--main-color);
     position: relative;
-    width: 120%;
-    left: -10%;
+    width: 100%;
+    /*width: 120%;
+    left: -10%;*/
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px 0;
+}
+.back {
+    z-index: -5;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1920px;
+    margin-left: -960px;
+    background-color: var(--main-color);
 }
 .section-form-content {
     padding: 20px 20px;
