@@ -17,7 +17,7 @@ export default function TabsDiagnostika() {
         { title: "Тридмил-тест", pic: diagn5, id: 5 },
         { title: "ЧП ЭХО-КГ", pic: diagn6, id: 6 },
         { title: "Сцинтиграфия миокарда",pic: diagn7, id: 7 },
-        { title: "КТ, МРТ с контрастoм", pic: diagn8, id: 8 },
+        { title: "КТ, МРТ с контрастированием", pic: diagn8, id: 8 },
     ]
     return (
         <>

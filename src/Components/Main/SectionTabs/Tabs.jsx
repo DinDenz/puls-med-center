@@ -1,21 +1,15 @@
 import React from 'react';
 import TabsNapravleniya from './TabsPages/TabsNapravleniya';
-import TabsDiagnostika from './TabsPages/TabsDiagnostika'
+import TabsDiagnostika from './TabsPages/TabsDiagnostika';
+import TabAnalizy from './TabsPages/TabsAnalizy'
 
 export default function Tabs() {
-    const analis = [
-        { title: "Общие анализы", pic: "" },
-        { title: "Биохимические исследования", pic: "" },
-        { title: "Коагулограмма", pic: "" },
-        { title: "Иммунологические исследования", pic: "" },
-        { title: "Гормональные исследования", pic: "" },
-        { title: "ПЦР-исследования", pic: "" },
-    ]
 
     return (
         <div className='items-container'>
             <TabsNapravleniya />
             <TabsDiagnostika />
+            <TabAnalizy />
         </div>
     )
 }
