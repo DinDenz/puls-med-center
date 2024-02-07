@@ -1,5 +1,7 @@
 import React from 'react';
 import TabsNavigation from './TabsNavigation';
+import Tabs from './Tabs';
+
 
 export default function SectionTabs() {
   return (
@@ -9,8 +11,8 @@ export default function SectionTabs() {
           <div className="tabs-head__title font-roboto-bold">Наши услуги</div>
         </div>
         <div className="tabs-body">
-          <div className="tabs-body__nav"><TabsNavigation />component</div>
-          <div className="tabs-body__items">component</div>
+          <div className="tabs-body__nav"><TabsNavigation /></div>
+          <div className="tabs-body__items"><Tabs /></div>
           stias eum alias molestiae praesentium libero obcaecati in eveniet.
         </div>
       </div>
