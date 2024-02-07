@@ -75,7 +75,7 @@ export default function SliderSlick() {
         slidesToShow: 1,
         slidesToScroll: 1,
         speed: 600,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 5000,
         nextArrow: <MyNextArrow />,
         prevArrow: <MyPrevArrow />,
