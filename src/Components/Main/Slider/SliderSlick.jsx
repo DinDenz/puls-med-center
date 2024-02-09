@@ -93,7 +93,7 @@ export default function SliderSlick() {
                         <img
                             className="slider__item"
                             src={image.img} alt={`picture ${index + 1}`} />
-                        <div className="container infoslide">
+                        <div className="infoslide">
                             <div className="inner-info">
                                 <div className="title font-roboto-bold">{image.title}<br />{image.subtitle}<br />{image.subtitle2}</div>
                                 <p className="text">{image.text},<br />{image.text2}</p>
@@ -108,7 +108,7 @@ export default function SliderSlick() {
 
 }
 
-/*Шта тут происходит?
+/*
 в параметрах settings вместо дефолтных кнопок передаю свои кнопки в виде компонентов.
 выше создаю свои кнопки со своими стилями MyNextArrow и MyPrevArrow
 мои кнопки получают пропсы с дефолтными онкликом и именами классов

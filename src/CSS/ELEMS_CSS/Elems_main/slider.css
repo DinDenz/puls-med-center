@@ -1,9 +1,13 @@
 .wrap {
     position: relative;
-    width: 120%;
-    left: -10%;
+    width: 1920px;
+    /*width: 120%;
+    left: -10%;*/
     overflow: hidden;
     height: 515px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 .slider {
     position: relative;
@@ -68,15 +72,7 @@
 .slider .slick-arrow.slick-next:focus .next_arrow {
     fill: white;
 }
-@media screen and (min-width: 1400px){
-	.slider .slick-arrow.slick-prev{
-    left: 13%;
-}
-.slider .slick-arrow.slick-next{
-    right: 13%;
-}
-}
-@media screen and (min-width: 1580px){
+@media screen and (min-width: 1780px){
 	.slider .slick-arrow.slick-prev{
     left: 15%;
 }
@@ -84,21 +80,37 @@
     right: 15%;
 }
 }
-@media screen and (min-width: 1680px){
-	.slider .slick-arrow.slick-prev{
-    left: 17%;
+@media screen and (max-width: 1779px){
+    .slider .slick-arrow.slick-prev{
+        left: 15%;
+    }
+    .slider .slick-arrow.slick-next{
+        right: 15%;
+    }
 }
-.slider .slick-arrow.slick-next{
-    right: 17%;
+@media screen and (max-width: 1420px){
+    .slider .slick-arrow.slick-prev{
+        left: 18%;
+    }
+    .slider .slick-arrow.slick-next{
+        right: 18%;
+    }
 }
+@media screen and (max-width: 1280px){
+    .slider .slick-arrow.slick-prev{
+        left: 24.5%;
+    }
+    .slider .slick-arrow.slick-next{
+        right: 24.5%;
+    }
 }
-@media screen and (min-width: 1780px){
-	.slider .slick-arrow.slick-prev{
-    left: 19%;
-}
-.slider .slick-arrow.slick-next{
-    right: 19%;
-}
+@media screen and (max-width: 992px){
+    .slider .slick-arrow.slick-prev{
+        left: 28%;
+    }
+    .slider .slick-arrow.slick-next{
+        right: 28%;
+    }
 }
 @media screen and (max-width: 768px){
     .slider .slick-arrow {
@@ -106,11 +118,6 @@
     }
 }
 
-/*div над картинкой дефолтный*/
-.slider .slick-slide>div{
-    position: relative;
-    height: 100%;
-}
 /*адаптивная картинка*/
 .slider__item {
     object-fit: cover;
@@ -148,21 +155,25 @@
     font-size: 0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-.container.infoslide {
+/*div над картинкой дефолтный*/
+.slider .slick-slide>div{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.infoslide {
     display: flex;
     align-items: center;
     height: 100%;
-    width: 76%;
-    max-width: 1280px;
+    margin-left:350px ;
 }
-
 .inner-info {
     z-index: 1;
 	padding: 30px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
 }
 .inner-info .title {
     margin: 0 0 30px 0;
@@ -188,17 +199,14 @@
     color: white;
     background-color: var(--main-color);
 }
-
+@media screen and (max-width: 1280px){
+    .infoslide {
+        margin-left:460px ;
+    }
+}
 @media screen and (max-width: 992px){
-    .container.infoslide {
-        width: 76%;
-    }
-    .slider .slick-arrow.slick-prev{
-        left: 12%;
-    }
-    
-    .slider .slick-arrow.slick-next{
-        right: 12%;
+    .infoslide {
+        margin-left:590px;
     }
     .inner-info {
         padding: 25px 30px;
@@ -215,10 +223,13 @@
     }
 }
 @media screen and (max-width: 768px){
+    .infoslide {
+        margin-left:690px;
+        max-width: 480px;
+    }
 	.inner-info {
         padding: 10px;
         height: 320px;
-        width: 480px;
     }
     .inner-info .title {
         margin: 0 0 20px 0;
@@ -233,12 +244,15 @@
     
 }
 @media screen and (max-width: 576px){
+    .slider .slick-slide>div{
+        justify-content: center;
+    }
+    .infoslide {
+        margin-left:0;
+    }
 	.inner-info {
         padding: 10px;
         height: 350px;
-    }
-    .container.infoslide {
-        width: 78%;
     }
     .inner-info .title {
         margin: 0 0 35px 0;
@@ -256,11 +270,11 @@
     
 }
 @media screen and (max-width: 496px) {
+    .infoslide {
+        max-width: 420px;
+    }
     .inner-info {
         padding: 10px;
-    }
-    .container.infoslide {
-        width: 82%;
     }
     .inner-info .title {
         margin: 0 0 30px 0;
@@ -273,9 +287,10 @@
         margin: 0 0 30px 0;
     }
 }
-@media screen and (max-width: 457px) {
-    .container.infoslide {
-        width: 90%;
+@media screen and (max-width: 422px) {
+    .infoslide {
+        max-width: 325px;
+        min-width: 320px;
     }
     .inner-info .text {
         font-size: 1rem;
@@ -284,9 +299,6 @@
     }
 }
 @media screen and (max-width: 359px) {
-    .container.infoslide {
-        width: 92%;
-    }
     .inner-info .title {
         margin: 0 0 30px 0;
 		font-size: 1.4rem;

@@ -1,0 +1,133 @@
+.section-tabs {
+    padding: 30px 10px;
+    position: relative;
+}
+.section-tabs__content{
+    display: block;
+    max-width: 1150px;
+    margin: auto;
+}
+.tabs-head{
+
+}
+.tabs-head__title {
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.tabs-body__nav{
+
+}
+.tabs-body__items{
+    box-sizing: border-box;
+}
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 20px;
+}
+.nav-list li {
+    margin-right: 20px;
+}
+.inactive, .activeTab{
+    display: block;  
+    font-size: 1.4rem;
+    transition: 0.3s;
+}
+.inactive:hover {
+    color:var(--colored-button-hover-color);
+}
+.inactive {
+    color:var(--main-color-full);
+}
+.activeTab {
+    color:black;
+}
+.items-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.tab-item {
+    flex: 0 0 25%;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    max-width: 25%;
+    min-height: 178px;
+}
+.tab-item-card {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 20px 15px;
+    color:black;
+    font-size:1rem;
+    text-align: center;
+    line-height: 1.4;
+}
+.tab-item-card:hover {
+    border-color: transparent;
+    box-shadow: 0 5px 17px rgba(0,0,0,0.15);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px)
+}
+.pic-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    margin: 0 auto 10px;
+}
+.pic {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    max-height: 100%;
+    margin: 0 auto;
+}
+.subs {
+    white-space: wrap;
+}
+
+@media screen and (max-width: 992px) {
+    .tab-item {
+        flex: 0 0 33.3%;
+        max-width: 33.3%;
+    }
+    .tabs-head__title {
+        font-size: 2.3rem;
+    }
+    .nav-list li a {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 796px) {
+    .tab-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+}
+    .tabs-head__title {
+        font-size: 2rem;
+}
+}
+@media screen and (max-width: 576px) {
+    .tab-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .tabs-head__title {
+        font-size: 1.8rem;
+}
+}

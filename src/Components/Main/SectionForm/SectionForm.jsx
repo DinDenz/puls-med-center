@@ -77,6 +77,7 @@ export default function SectionForm() {
 
   return (
     <div className='section-form'>
+      <div className="back"></div>
       <div className='section-form-content'>
         <div className='section-form__head head'>
           <div className="head__title font-roboto-bold">Оставить заявку</div>

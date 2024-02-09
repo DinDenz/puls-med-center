@@ -108,7 +108,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	--main-color-full:rgb(10, 171, 196);
 	--middle-opacity-black-color: rgba(0,0,0,0.7);
 	--low-opacity-black-color: rgba(0,0,0,0.9);
-	--colored-button-hover-color :rgb(6, 144, 165);
+	--colored-button-hover-color :rgb(3, 124, 143);
   }
 /*------верстка---------------------------------------------------------*/
 .wrapper {
@@ -125,7 +125,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 @media screen and (min-width: 1281px){
 	.container {
-		max-width: 1920px;
+		max-width: 1280px;
 	}
 	.header .container {
 		max-width: 1280px;
