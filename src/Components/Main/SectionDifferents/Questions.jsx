@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as Arrow } from './../../../IMG/arrows/left_arrow.svg';
+import Panel from './Panel';
 
 
 export default function Questions() {
@@ -22,35 +22,11 @@ export default function Questions() {
         }
     ]
 
-
-
     return (
         <div className="accordeon-2">
             {questions.map((question) => (
-                <div className="panel" key={question.id}>
-                    <div className="panel__head">
-                        <a
-                            className='panel__title'
-                            href="#">{question.title}
-                            <Arrow className="arrow " />
-                        </a>
-                    </div>
-                    <div className="panel__collapse">
-                        <div className="accordeon-body">{question.text}
-                            {question.ul && (
-                                <ul>
-                                    {Object.entries(question.ul).map(([keyLi, liText]) => (
-                                        <li key={keyLi}>
-                                            {liText}
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                        </div>
-                    </div>
-                </div>
+                <Panel key={question.id} quest={question} />
             ))}
-
         </div>
     )
 }

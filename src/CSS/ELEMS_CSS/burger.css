@@ -319,9 +319,6 @@
     overflow: hidden;
     transition: 0.2s ease-out;
 }
-.collapse-accordeon.show {
-    height: auto;
-}
 
 .item_2 {
     background-color: rgba(228, 234, 240, 0.7);

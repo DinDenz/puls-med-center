@@ -52,3 +52,13 @@
     width: 22px;
     height: 22px;
 }
+.arrow.active {
+    fill:var(--low-opacity-black-color);
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+.panel__collapse {
+    height: 0;
+    overflow: hidden;
+    transition: 0.2s ease-out;
+}
