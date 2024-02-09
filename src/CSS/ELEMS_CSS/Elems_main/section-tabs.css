@@ -19,11 +19,9 @@
 
 }
 .tabs-body__items{
-    border:1px solid green;
     box-sizing: border-box;
 }
 .nav-list {
-    border: 1px solid red;
     display: flex;
     flex-direction: row;
     overflow-x: auto;
@@ -33,14 +31,19 @@
 .nav-list li {
     margin-right: 20px;
 }
-.nav-list li a {
-    display: block;
-    color:var(--main-color-full);
+.inactive, .activeTab{
+    display: block;  
     font-size: 1.4rem;
     transition: 0.3s;
 }
-.nav-list li a:hover {
+.inactive:hover {
     color:var(--colored-button-hover-color);
+}
+.inactive {
+    color:var(--main-color-full);
+}
+.activeTab {
+    color:black;
 }
 .items-container{
     display: flex;
@@ -79,7 +82,6 @@
     transform: translateY(-10px)
 }
 .pic-box {
-    border: 1px solid blue;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,6 +100,7 @@
 .subs {
     white-space: wrap;
 }
+
 @media screen and (max-width: 992px) {
     .tab-item {
         flex: 0 0 33.3%;
