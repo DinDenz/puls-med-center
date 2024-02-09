@@ -1,6 +1,7 @@
 @import url('./Elems_main/slider.css');
 @import url('./Elems_main/section-form.css');
 @import url('./Elems_main/section-tabs.css');
+@import url('./Elems_main/section-differents.css');
 
 .main {
     flex: 1 1 auto;
