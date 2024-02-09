@@ -11,7 +11,7 @@ export default function SectionDifferents() {
           </div>
         </div>
         <div className="diff-body">
-          <div className="diff-body__items">
+          <div className="diff-body__questions">
             <Questions />
           </div>
         </div>

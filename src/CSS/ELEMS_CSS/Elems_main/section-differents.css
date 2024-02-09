@@ -16,6 +16,12 @@
     letter-spacing: 1px;
     margin-bottom: 20px;
 }
-.diff-body__items {
+.diff-body__questions {
     box-sizing: border-box;
+}
+.questions-container {
+    display: flex;
+    margin-left: -10px;
+    margin-right: -10px;
+    flex-direction: column;
 }
