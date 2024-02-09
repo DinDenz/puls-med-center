@@ -25,18 +25,29 @@ export default function Questions() {
     return (
         <div className='questions-container'>
             <div className="accordeon-2">
-                <div className="panel">
-                    <div className="panel__head">
-                        <a
-                            className='panel__title'
-                            href="#">Где применяется компьютерная томография</a>
-                    </div>
-                    <div className="panel__collapse">
-                        <div className="accordeon-body">
-                            Компьютерная томография имеет широкий диапазон применения практически во всех областях медицины. Но, в первую очередь, для исследования легких, органов брюшной полости, успешно применяется в урологии, в исследовании костно-суставной системы человека
+                {questions.map((question) => (
+                    <div className="panel" key={question.id}>
+                        <div className="panel__head">
+                            <a
+                                className='panel__title'
+                                href="#">{question.title}</a>
+                        </div>
+                        <div className="panel__collapse">
+                            <div className="accordeon-body">{question.text}
+                                {question.ul && (
+                                    <ul>
+                                        {Object.entries(question.ul).map(([keyLi, liText]) => (
+                                            <li key={keyLi}>
+                                                {liText}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
                         </div>
                     </div>
-                </div>
+                ))}
+
             </div>
         </div>
     )
