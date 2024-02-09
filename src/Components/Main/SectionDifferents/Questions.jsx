@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { ReactComponent as Arrow } from './../../../IMG/arrows/left_arrow.svg';
+
 
 export default function Questions() {
     const questions = [
@@ -23,32 +25,32 @@ export default function Questions() {
 
 
     return (
-        <div className='questions-container'>
-            <div className="accordeon-2">
-                {questions.map((question) => (
-                    <div className="panel" key={question.id}>
-                        <div className="panel__head">
-                            <a
-                                className='panel__title'
-                                href="#">{question.title}</a>
-                        </div>
-                        <div className="panel__collapse">
-                            <div className="accordeon-body">{question.text}
-                                {question.ul && (
-                                    <ul>
-                                        {Object.entries(question.ul).map(([keyLi, liText]) => (
-                                            <li key={keyLi}>
-                                                {liText}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
-                            </div>
+        <div className="accordeon-2">
+            {questions.map((question) => (
+                <div className="panel" key={question.id}>
+                    <div className="panel__head">
+                        <a
+                            className='panel__title'
+                            href="#">{question.title}
+                            <Arrow className="arrow " />
+                        </a>
+                    </div>
+                    <div className="panel__collapse">
+                        <div className="accordeon-body">{question.text}
+                            {question.ul && (
+                                <ul>
+                                    {Object.entries(question.ul).map(([keyLi, liText]) => (
+                                        <li key={keyLi}>
+                                            {liText}
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
                         </div>
                     </div>
-                ))}
+                </div>
+            ))}
 
-            </div>
         </div>
     )
 }

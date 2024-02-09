@@ -19,9 +19,36 @@
 .diff-body__questions {
     box-sizing: border-box;
 }
-.questions-container {
+.accordeon-2 {
     display: flex;
-    margin-left: -10px;
-    margin-right: -10px;
     flex-direction: column;
+}
+.panel {
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    background: #fff;
+    box-shadow: 0 4px 22px rgba(0,0,0,.07);
+}
+.panel__head {
+    position: relative;
+}
+.panel__title {
+    display: block;
+    color:var(--main-color);
+    padding: 15px 60px 0 15px;
+    font-size: 1.7rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.arrow {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    fill:var(--main-color);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    transition: all 0.3s;
+    width: 22px;
+    height: 22px;
 }
