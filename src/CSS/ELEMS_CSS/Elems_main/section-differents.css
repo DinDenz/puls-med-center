@@ -1,0 +1,114 @@
+.section-diffrents {
+    padding: 20px 10px;
+    position: relative;
+}
+.section-diffrents__content {
+    display: block;
+    max-width: 1150px;
+    margin: auto;
+}
+.diff-head {
+}
+
+.diff-head__title {
+    font-size: 2.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.diff-body__questions {
+    box-sizing: border-box;
+}
+.accordeon-2 {
+    display: flex;
+    flex-direction: column;
+}
+.panel {
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+.panel__head {
+    position: relative;
+}
+.panel__title {
+    display: block;
+    color:var(--main-color);
+    padding: 15px 60px 0 15px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.panel__title:focus,.panel__title:hover {
+    color: var(--low-opacity-black-color);
+}
+.arrow {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    fill:var(--main-color);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    transition: all 0.3s;
+    width: 22px;
+    height: 22px;
+}
+.arrow.active {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+.panel__collapse {
+    height: 0;
+    overflow: hidden;
+    transition: 0.2s ease-out;
+}
+.accordeon-body-2 {
+    padding: 10px 60px 5px 25px;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: var(--low-opacity-black-color);
+}
+.accordeon-body-2 ul {
+    position: relative;
+    margin: 22px 0 30px;
+    padding: 0 60px 0 0;
+    line-height: 1.4;
+}
+@media screen and (max-width: 796px){
+    .diff-head__title {
+        font-size: 1.8rem;
+        letter-spacing: 0;
+    }
+    .panel__title {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 576px){
+    .accordeon-body-2 ul {
+        padding: 0px 0px 0 0;
+    }
+    .diff-head__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .panel__title {
+        font-size: 1.2rem;
+    }
+}
+.accordeon-body-2 ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+}
+.accordeon-body-2 ul li::before {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    background-color: rgb(228, 119, 47);
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left:5px;
+    top:5px;
+}
