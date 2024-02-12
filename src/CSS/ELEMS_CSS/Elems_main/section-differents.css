@@ -1,5 +1,5 @@
 .section-diffrents {
-    padding: 30px 10px;
+    padding: 20px 10px;
     position: relative;
 }
 .section-diffrents__content {
@@ -75,9 +75,25 @@
     padding: 0 60px 0 0;
     line-height: 1.4;
 }
+@media screen and (max-width: 796px){
+    .diff-head__title {
+        font-size: 1.8rem;
+        letter-spacing: 0;
+    }
+    .panel__title {
+        font-size: 1.4rem;
+    }
+}
 @media screen and (max-width: 576px){
     .accordeon-body-2 ul {
-        padding: 20px 0px 0 0;
+        padding: 0px 0px 0 0;
+    }
+    .diff-head__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .panel__title {
+        font-size: 1.2rem;
     }
 }
 .accordeon-body-2 ul li {
