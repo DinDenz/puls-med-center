@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/puls-med-center/static/css/main.f2276a99.css",
-    "main.js": "/puls-med-center/static/js/main.fa8b3494.js",
+    "main.css": "/puls-med-center/static/css/main.9c56756f.css",
+    "main.js": "/puls-med-center/static/js/main.a461e50f.js",
     "static/media/img2.jpg": "/puls-med-center/static/media/img2.e0824c4ecce194ac3ca9.jpg",
     "static/media/img4.jpg": "/puls-med-center/static/media/img4.38035567df6caab2f835.jpg",
     "static/media/img3.jpg": "/puls-med-center/static/media/img3.dca7527c32761b342f80.jpg",
@@ -15,15 +15,33 @@
     "static/media/logoMedCentreMobNobg.png": "/puls-med-center/static/media/logoMedCentreMobNobg.d49bbbb4516c1147cee4.png",
     "static/media/assist.png": "/puls-med-center/static/media/assist.7bb2f91abdd58910e5de.png",
     "static/media/mastercard.png": "/puls-med-center/static/media/mastercard.058a1a94dc8a26a204a6.png",
+    "static/media/medical_3.svg": "/puls-med-center/static/media/medical_3.886e2bb7ea1a1fb94e2c4fac6a8de656.svg",
+    "static/media/analis_6.svg": "/puls-med-center/static/media/analis_6.690b1d420424cae8edc4f4f32f2e15db.svg",
+    "static/media/analis_2.svg": "/puls-med-center/static/media/analis_2.2636889244f2644732f6b6e216c2d82b.svg",
+    "static/media/diagn_5tridmil.svg": "/puls-med-center/static/media/diagn_5tridmil.7431b18e544e21fe276ff32dd5067149.svg",
+    "static/media/analis_5.svg": "/puls-med-center/static/media/analis_5.ad7108ccd2837776a93b07edcb5a1a36.svg",
+    "static/media/diagn_6scinti.svg": "/puls-med-center/static/media/diagn_6scinti.29b3130c9899e86d77572ba788f3376c.svg",
+    "static/media/analis_1.svg": "/puls-med-center/static/media/analis_1.2caa8880aa37227f3b7744c1cd285f0f.svg",
+    "static/media/diagn_7uzi.svg": "/puls-med-center/static/media/diagn_7uzi.b44c44072f3eb14b5175c574eff8aef1.svg",
+    "static/media/diagn_4ekg.svg": "/puls-med-center/static/media/diagn_4ekg.49658c463a53b03950245bdc3525aeff.svg",
+    "static/media/diagn_3xray.svg": "/puls-med-center/static/media/diagn_3xray.b6c61c9be19853e7270740b5c8f6dd71.svg",
+    "static/media/analis_4.svg": "/puls-med-center/static/media/analis_4.25275f3429a1d2ba8d8b6431ee1af386.svg",
+    "static/media/analis_3.svg": "/puls-med-center/static/media/analis_3.1c867cea92ae99eb06cd8acecfc545b8.svg",
+    "static/media/medical_2.svg": "/puls-med-center/static/media/medical_2.2665495c67671918ca5bd165930bfd94.svg",
+    "static/media/diagn_1kt.svg": "/puls-med-center/static/media/diagn_1kt.ff0721616f6f251141a7afcf2a6f72b2.svg",
+    "static/media/medical_4.svg": "/puls-med-center/static/media/medical_4.2428cc34b5bcfd8c0e8d8f7982c08817.svg",
+    "static/media/diagn_2mrt.svg": "/puls-med-center/static/media/diagn_2mrt.3dbbe8d4ce86a9fd77e29330b726af50.svg",
+    "static/media/medical_1.svg": "/puls-med-center/static/media/medical_1.7620ca9bb50239403eb27b2e935b6e0a.svg",
+    "static/media/diagn_8rent.svg": "/puls-med-center/static/media/diagn_8rent.e0673b32acf16aa7ca97a87ebced11d9.svg",
     "static/media/iconPhone.svg": "/puls-med-center/static/media/iconPhone.3d4842bf5b1d73e816b7.svg",
     "static/media/iconSearch.svg": "/puls-med-center/static/media/iconSearch.b9f5f354d89b24898b72956815529459.svg",
     "index.html": "/puls-med-center/index.html",
     "static/media/left_arrow.svg": "/puls-med-center/static/media/left_arrow.a13232effa9015e83a8f3bcd8290cca2.svg",
-    "main.f2276a99.css.map": "/puls-med-center/static/css/main.f2276a99.css.map",
-    "main.fa8b3494.js.map": "/puls-med-center/static/js/main.fa8b3494.js.map"
+    "main.9c56756f.css.map": "/puls-med-center/static/css/main.9c56756f.css.map",
+    "main.a461e50f.js.map": "/puls-med-center/static/js/main.a461e50f.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2276a99.css",
-    "static/js/main.fa8b3494.js"
+    "static/css/main.9c56756f.css",
+    "static/js/main.a461e50f.js"
   ]
 }
