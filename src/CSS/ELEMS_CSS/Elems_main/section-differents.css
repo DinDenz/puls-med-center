@@ -63,24 +63,29 @@
     overflow: hidden;
     transition: 0.2s ease-out;
 }
-.accordeon-body {
+.accordeon-body-2 {
     padding: 10px 60px 5px 25px;
     font-size: 1rem;
     line-height: 1.4;
     color: var(--low-opacity-black-color);
 }
-.accordeon-body ul {
+.accordeon-body-2 ul {
     position: relative;
     margin: 22px 0 30px;
-    padding: 0 80px 0 0;
+    padding: 0 60px 0 0;
     line-height: 1.4;
 }
-.accordeon-body ul li {
+@media screen and (max-width: 576px){
+    .accordeon-body-2 ul {
+        padding: 20px 0px 0 0;
+    }
+}
+.accordeon-body-2 ul li {
     position: relative;
     padding-left: 22px;
     margin-bottom: 8px;
 }
-.accordeon-body ul li::before {
+.accordeon-body-2 ul li::before {
     content: '';
     display: block;
     border-radius: 50%;
