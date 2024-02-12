@@ -28,16 +28,24 @@
     justify-content: flex-start;
 }
 .stocks-head__title,  .feedback-head__title {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     line-height: 1.3;
     padding: 10px 15px;
-    margin-left: -10px;
+    margin-left: -15px;
 }
 .stocks-link, .feedback-link {
     color: var(--main-color);
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 5px;
     font-size: 1.2rem;
+    transition: 0.2s;
+}
+.stocks-link:hover, .feedback-link:hover, 
+.stocks-link:focus,.feedback-link:focus {
+    color: var(--main-color-full);
+    text-decoration: underline;
+    -webkit-text-decoration-color: rgba(76,183,202,.6);
+    text-decoration-color: rgba(76,183,202,.6)
 }
 .stocks-link:after, .feedback-link:after {
     content: '\2794';
@@ -52,19 +60,18 @@
 .cards__row {
     display: flex;
     flex-wrap: wrap;
-    margin-left:-10px;
+    justify-content: space-between;
 }
 .cards-col {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 0 0 48.5%;
+    max-width: 48.5%;
+    background-color: rgba(240, 240, 240, 0.541);
 }
 .cards-col a{
     display: flex;
     flex-direction: column;
-    max-width: 320px;
     gap:10px;
     margin: 0 auto;
-    background-color: rgba(220, 220, 220, 0.5);
     text-decoration: none;
     transition: 0.3s ease;
 }
@@ -139,4 +146,15 @@
     color:var(--low-opacity-black-color);
     line-height: 1.5;
     font-style: italic;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+@media screen and (max-width: 992px){
+	.stocks-head__title,  .feedback-head__title {
+        font-size: 2.2rem;
+    }
+    .stocks-link, .feedback-link {
+        padding: 10px 0px;
+        font-size: 1.1rem;
+    }
 }
