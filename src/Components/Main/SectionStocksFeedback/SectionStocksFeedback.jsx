@@ -1,5 +1,6 @@
 import React from 'react';
 import Stocks from './Stocks';
+import Feedback from './Feedback';
 
 export default function SectionStocksFeedback() {
     return (
@@ -7,9 +8,7 @@ export default function SectionStocksFeedback() {
             <div className="section-stocks-feedback__content">
                 <div className="section-stocks-feedback__row">
                     <Stocks />
-                    <div className="feedback">
-
-                    </div>
+                    <Feedback />
                 </div>
             </div>
         </div>
