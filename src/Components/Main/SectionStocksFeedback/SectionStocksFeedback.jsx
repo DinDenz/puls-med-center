@@ -1,5 +1,5 @@
 import React from 'react';
-import Stocks from './Stocks'
+import Stocks from './Stocks';
 
 export default function SectionStocksFeedback() {
     return (

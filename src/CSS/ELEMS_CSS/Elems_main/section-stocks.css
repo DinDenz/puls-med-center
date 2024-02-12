@@ -55,11 +55,11 @@
     flex-wrap: wrap;
     margin-left:-10px;
 }
-.cards-col_1, .cards-col_2 {
+.cards-col {
     flex: 0 0 50%;
     max-width: 50%;
 }
-.cards-col_1 a, .cards-col_2 a {
+.cards-col a{
     display: flex;
     flex-direction: column;
     max-width: 320px;
