@@ -65,7 +65,7 @@
 .cards-col {
     flex: 0 0 48.5%;
     max-width: 48.5%;
-    background-color: rgba(240, 240, 240, 0.541);
+    
 }
 .cards-col a{
     display: flex;
@@ -74,6 +74,7 @@
     margin: 0 auto;
     text-decoration: none;
     transition: 0.3s ease;
+    background-color: rgba(240, 240, 240, 0.541);
 }
 .cards-col a:focus,.cards-col a:hover {
     background: #fff;
