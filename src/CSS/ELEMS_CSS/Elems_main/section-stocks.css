@@ -157,4 +157,69 @@
         padding: 10px 0px;
         font-size: 1.1rem;
     }
+    .feedback-main__text {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+    .cards-description {
+        padding: 5px 15px 25px 15px;
+    }
+    .cards-img {
+        min-height: 180px;
+    }
+}
+@media screen and (max-width: 860px){
+    .section-stocks-feedback__row {
+        flex-direction: column;
+        gap:15px;
+    }
+    .cards {
+        margin-bottom: 20px;
+    }
+    .cards-description {
+        padding: 15px 15px 25px 15px;
+    }
+    .feedback-head__title {
+        padding: 5px 15px;
+    }
+    .cards-img {
+        min-height: 200px;
+    }
+}
+@media screen and (max-width: 768px){
+    .cards-description {
+        padding: 15px 15px 25px 15px;
+    }
+    .feedback-head__title {
+        padding: 5px 15px;
+    }
+    .stocks-head__title,  .feedback-head__title {
+        font-size: 2rem;
+    }
+    .stocks-link, .feedback-link {
+        font-size: 1rem;
+    }
+    .feedback-main__name {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 576px){
+    .cards__row {
+        flex-direction: column;
+        gap:25px;
+    }
+    .cards-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 420px){
+    .stocks-head__title,  .feedback-head__title {
+        font-size: 1.9rem;
+    }
+    .feedback-main__name {
+        font-size: 1.1rem;
+    }
 }
