@@ -1,12 +1,7 @@
 .olala {
     font-size: 5rem;
     color:red;
-    min-height: 700px;
-}
-.igogo {
-    font-size: 3rem;
-    color:green;
-    min-height: 700px;
+    min-height: 300px;
 }
 .egege {
     min-height: 700px;
@@ -14,4 +9,7 @@
 }
 .doctors {
     min-height: 700px;
+}
+.section-rev-list {
+
 }
