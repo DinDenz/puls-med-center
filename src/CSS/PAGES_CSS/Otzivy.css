@@ -10,8 +10,10 @@
 .doctors {
     min-height: 700px;
 }
+/*-------------------------------------*/
 .section-rev-list {
-    padding: 0 20px;
+    padding: 0 50px;
+    margin-bottom: 20px;
 }
 .feedback-main__rating{
     font-weight: 500;
