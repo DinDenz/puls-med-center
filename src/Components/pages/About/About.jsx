@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import SectionForm from '../../Main/SectionForm/SectionForm';
 
 export default function About() {
   return (
