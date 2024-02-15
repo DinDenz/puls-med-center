@@ -11,5 +11,10 @@
     min-height: 700px;
 }
 .section-rev-list {
-
+    padding: 0 20px;
+}
+.feedback-main__rating{
+    font-weight: 500;
+    margin-top: 7px;
+    font-style: italic;
 }

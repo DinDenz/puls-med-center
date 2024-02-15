@@ -65,7 +65,17 @@ export default function SectionRewList() {
   ]
   return (
     <div className='section-rev-list'>
-
+        <div className="feedback-main">
+                <div className="feedback-main__row">
+                    {feedbacks.map((feedback) => (
+                        <div className='feedback-main-content' key={feedback.id}>
+                            <div className="feedback-main__name font-roboto-bold">{feedback.name}</div>
+                            <div className="feedback-main__text">{feedback.text}</div>
+                            <div className="feedback-main__rating">{`Рейтинг: ${feedback.rating}`}</div>
+                        </div>
+                    ))}
+                </div>
+            </div>
     </div>
   )
 }
