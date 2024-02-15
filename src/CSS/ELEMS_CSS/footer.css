@@ -3,6 +3,7 @@
     display: flex;
     font-size: 1em;
     color: white;  
+    border-top: 1px solid rgba(220, 220, 220, 0.5);
 }
 .footer-content {
     align-self: center;
