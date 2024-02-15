@@ -7,9 +7,9 @@ export default function NavigationRowTop() {
     return (
         <div className='navigation__row navigation__row--top'>
             <div className="navigation__col navigation__col--menu">
-                <a href="">О нас</a>
-                <a href="">Врачи</a>
-                <a href="">Отзывы</a>
+                <a href="/about">О нас</a>
+                <a href="/doctors">Врачи</a>
+                <a href="/otzivy">Отзывы</a>
             </div>
             <div className="navigation__col navigation__col--search">
                 <form action="#" method='GET'>
@@ -18,7 +18,7 @@ export default function NavigationRowTop() {
                             placeholder="Поиск по сайту" maxLength="50" required />
                         <div className='btn-search'>
                             <input name="bttn-search" type="submit" value="" />
-                            <SearchIco className="search-ico"/>
+                            <SearchIco className="search-ico" />
                         </div>
                     </fieldset>
                 </form>
