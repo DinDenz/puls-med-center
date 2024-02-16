@@ -49,6 +49,12 @@
 .review-form-cust-sel .inner.openbord {
     border-radius: 25px 25px 0 0;
 }
+.review-form-cust-sel .pseudo-select__drop.yes {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 25px 25px;
+    overflow-y: hidden;
+    left: -1px;
+}
 .review-form--inpt .form-elem {
     background-color: transparent;
     color: var(--middle-opacity-black-color);

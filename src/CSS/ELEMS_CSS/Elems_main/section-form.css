@@ -156,7 +156,7 @@
     position: relative;
     z-index: 100;
     font-size: 0.9rem;
-    padding: 18px 35px 18px 15px;
+    padding: 16px 25px 16px 15px;
     color:var(--middle-opacity-black-color);
     cursor: pointer;
     white-space: wrap;
