@@ -1,3 +1,8 @@
+.olala {
+    font-size: 5rem;
+    color:red;
+    min-height: 300px;
+}
 .egege {
     min-height: 700px;
     background-color: aquamarine;
@@ -15,4 +20,3 @@
     margin-top: 7px;
     font-style: italic;
 }
-/*------------------------------------------*/
