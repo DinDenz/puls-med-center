@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import InputFio from '../../../Main/SectionForm/InputFio';
 import InputPhone from '../../../Main/SectionForm/InputPhone';
+import CustomSelect from '../../../Main/SectionForm/CustomSelect';
 
 export default function FormForRew() {
   const formRef = useRef(); //форма
@@ -14,9 +15,14 @@ export default function FormForRew() {
   const telRef = useRef();
   //customSelect
   const spanRef = useRef();
-  const defaultValue = "Направления";
+  const defaultValue = "Выберите тему";
   const [selectedValue, setSelectedValue] = useState(defaultValue);//отображается в псевдоселекте как выбранное
-
+  const dataForSelect = [
+    { value: "Выберите тему", text: "Выберите тему" },
+    { value: "Благодарность", text: "Благодарность" },
+    { value: "Жалоба", text: "Жалоба" },
+    { value: "Предложение", text: "Предложение" },
+  ]
   const handleSubmit = (e) => {
     e.preventDefault();
     if (e.nativeEvent.submitter.name !== 'submit') return   //условие написал так как онсабмит происходил при каждом изменении значения поля формы, a так он проиходит только при клике на сабмит
@@ -64,6 +70,7 @@ export default function FormForRew() {
         onSubmit={handleSubmit}
         onKeyDown={(e) => (e.key === 'Enter') ? e.preventDefault() : ''}
         encType="multipart/form-data">
+        <CustomSelect data={dataForSelect} isSelectValid={isSelectValid} defaultValue={defaultValue} selectedValue={selectedValue} setSelectedValue={setSelectedValue} spanRef={spanRef} setIsSelectValid={setIsSelectValid} />
         <div className={`review-form--inpt ${!isFioValid && 'invalid'}`}><InputFio fioRef={fioRef} setIsFioValid={setIsFioValid} /></div>
         <div className={`review-form--inpt ${!isTelValid && 'invalid'}`}><InputPhone telRef={telRef} setIsTelValid={setIsTelValid} /></div>
         <div className='review-form--bt'><input className='form-elem button' type="submit" name='submit' value='Отправить' /></div>

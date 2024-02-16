@@ -1,17 +1,8 @@
 import React, { useEffect } from 'react';
 import { useOpen } from '../../hooks/useOpen';
 
-export default function CustomSelect({ setIsSelectValid, isSelectValid, defaultValue, selectedValue, setSelectedValue, spanRef }) {
+export default function CustomSelect({ setIsSelectValid, isSelectValid, defaultValue, selectedValue, setSelectedValue, spanRef, data }) {
     const { open, setOpen, ref, dropRef, toggleDrop } = useOpen(); //функционал по открытию-закрытию выпадающего псевдоселекта
-    const data = [
-        { value: "Направления", text: "Направления" },
-        { value: "Кардиология", text: "Кардиология" },
-        { value: "Детская кардиология", text: "Детская кардиология" },
-        { value: "Беременным", text: "Беременным" },
-        { value: "Ревматология", text: "Ревматология" },
-        { value: "Диагностика", text: "Диагностика" },
-        { value: "Лабораторная диагностика", text: "Лабораторная диагностика" },
-    ]
     //функционал по назначению измени спана в кнопке по выбранному селекту
     useEffect(() => {
         (selectedValue != defaultValue) ? spanRef.current.style.opacity = "1" :
