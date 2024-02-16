@@ -4,15 +4,10 @@ import CustomSelect from './CustomSelect';
 import InputFio from './InputFio';
 
 export default function SectionForm() {
-  const formRef = useRef(); //форма
   const [isFioValid, setIsFioValid] = useState(true);//валидность ФИО
   const [isTelValid, setIsTelValid] = useState(true);//валидность телефона
   const [isSelectValid, setIsSelectValid] = useState(true);//валидность селекта
   const [isFormValid, setIsFormValid] = useState(true);//валидность формы 
-  //inputFio  
-  const fioRef = useRef();
-  //inputTel 
-  const telRef = useRef();
   //customSelect
   const spanRef = useRef();
   const defaultValue = "Направления";
@@ -94,7 +89,7 @@ export default function SectionForm() {
         </div>
         <div className='section-form__body'>
           <div className="body__content">
-            <form ref={formRef}
+            <form
               className='feedback-form'
               action="#" method="post"
               onSubmit={handleSubmit}
@@ -103,8 +98,8 @@ export default function SectionForm() {
               <div className='form-elem-containter'>
                 <CustomSelect data={dataForSelect} isSelectValid={isSelectValid} defaultValue={defaultValue} selectedValue={selectedValue} setSelectedValue={setSelectedValue} spanRef={spanRef} setIsSelectValid={setIsSelectValid} />
               </div>
-              <div className={`form-elem-containter--inpt ${!isFioValid && 'invalid'}`}><InputFio fioRef={fioRef} setIsFioValid={setIsFioValid} /></div>
-              <div className={`form-elem-containter--inpt ${!isTelValid && 'invalid'}`}><InputPhone telRef={telRef} setIsTelValid={setIsTelValid} /></div>
+              <div className={`form-elem-containter--inpt ${!isFioValid && 'invalid'}`}><InputFio setIsFioValid={setIsFioValid} /></div>
+              <div className={`form-elem-containter--inpt ${!isTelValid && 'invalid'}`}><InputPhone setIsTelValid={setIsTelValid} /></div>
               <div className='form-elem-containter--bt'><input className='form-elem button' type="submit" name='submit' value='Отправить' /></div>
             </form>
           </div>

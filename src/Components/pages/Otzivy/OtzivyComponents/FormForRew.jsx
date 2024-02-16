@@ -5,16 +5,12 @@ import CustomSelect from '../../../Main/SectionForm/CustomSelect';
 import TextArea from './TextArea'
 
 export default function FormForRew() {
-  const formRef = useRef(); //форма
   const [isFioValid, setIsFioValid] = useState(true);//валидность ФИО
   const [isTelValid, setIsTelValid] = useState(true);//валидность телефона
   const [isSelectValid, setIsSelectValid] = useState(true);//валидность селекта
   const [isFormValid, setIsFormValid] = useState(true);//валидность формы 
   const [isAreaValid, setIsAreaValid] = useState(true);//валидность тексnареа
-  //inputFio  
-  const fioRef = useRef();
-  //inputTel 
-  const telRef = useRef();
+
   const areaRef = useRef();
   //customSelect
   const spanRef = useRef();
@@ -72,7 +68,7 @@ export default function FormForRew() {
   return (
     <div className='review-form-container'>
       <div className="review-form-title font-roboto-bold">Оставьте отзыв</div>
-      <form ref={formRef}
+      <form
         className='review-form'
         action="#" method="post"
         onSubmit={handleSubmit}
@@ -81,8 +77,8 @@ export default function FormForRew() {
         <div className='review-form-cust-sel'>
           <CustomSelect data={dataForSelect} isSelectValid={isSelectValid} defaultValue={defaultValue} selectedValue={selectedValue} setSelectedValue={setSelectedValue} spanRef={spanRef} setIsSelectValid={setIsSelectValid} />
         </div>
-        <div className={`review-form--inpt ${!isFioValid && 'invalid'}`}><InputFio fioRef={fioRef} setIsFioValid={setIsFioValid} /></div>
-        <div className={`review-form--inpt ${!isTelValid && 'invalid'}`}><InputPhone telRef={telRef} setIsTelValid={setIsTelValid} /></div>
+        <div className={`review-form--inpt ${!isFioValid && 'invalid'}`}><InputFio setIsFioValid={setIsFioValid} /></div>
+        <div className={`review-form--inpt ${!isTelValid && 'invalid'}`}><InputPhone setIsTelValid={setIsTelValid} /></div>
         <div className={`review-form--inpt ${!isAreaValid && 'invalid'}`}><TextArea areaRef={areaRef} setIsAreaValid={setIsAreaValid} /></div>
         <div className='review-form--bt'><input className='form-elem button' type="submit" name='submit' value='Отправить' /></div>
       </form>

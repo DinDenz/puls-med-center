@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import InputMask from 'react-input-mask';
 
-export default function InputPhone({ telRef,setIsTelValid }) {
+export default function InputPhone({ setIsTelValid }) {
     const [inputValue, setInputValue] = useState('');
 
     function handleChange(e) {
@@ -14,7 +14,6 @@ export default function InputPhone({ telRef,setIsTelValid }) {
     return (
         <>
             <InputMask
-                ref={telRef}
                 onChange={handleChange}
                 value={inputValue}
                 className='form-elem phone-inpt'
