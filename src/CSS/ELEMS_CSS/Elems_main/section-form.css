@@ -194,7 +194,7 @@
     content: '?';
     display: block;
     position: absolute;
-    top: 50%;
+    top: 21px;
     transform: translateY(-50%);
     -webkit-transform:translateY(-50%);
     -moz-transform: translateX(-50%);

@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import InputFio from '../../../Main/SectionForm/InputFio';
 import InputPhone from '../../../Main/SectionForm/InputPhone';
 import CustomSelect from '../../../Main/SectionForm/CustomSelect';
+import TextArea from './TextArea'
 
 export default function FormForRew() {
   const formRef = useRef(); //форма
@@ -9,10 +10,12 @@ export default function FormForRew() {
   const [isTelValid, setIsTelValid] = useState(true);//валидность телефона
   const [isSelectValid, setIsSelectValid] = useState(true);//валидность селекта
   const [isFormValid, setIsFormValid] = useState(true);//валидность формы 
+  const [isAreaValid, setIsAreaValid] = useState(true);//валидность тексnареа
   //inputFio  
   const fioRef = useRef();
   //inputTel 
   const telRef = useRef();
+  const areaRef = useRef();
   //customSelect
   const spanRef = useRef();
   const defaultValue = "Выберите тему";
@@ -30,25 +33,30 @@ export default function FormForRew() {
     setIsSelectValid(true);
     setIsFioValid(true);
     setIsTelValid(true);
+    setIsAreaValid(true);
     const form = e.target;
     const formData = new FormData(form);
     const napravlenie = formData.get('Napravlenie'); //получаем значение ключа напраление в конст направление
     const fio = formData.get('FIO');
     const tel = formData.get('tel');
-    const isValid = validateFormData(napravlenie, fio, tel);
+    const area = formData.get('textarea');
+    const isValid = validateFormData(napravlenie, fio, tel, area);
     setIsFormValid(isValid);
 
-    function validateFormData(napravlenie, fio, tel) {
+    function validateFormData(napravlenie, fio, tel, area) {
       // проверка правильности заполнения полей в общем и индивидуально
       const telRegExp = /^\+375\(\d{2}\) \d{3} - \d{2} - \d{2}$/;
       /*console.log(tel.includes("_") ? 'true' : 'false')*/ //еще один способ проверить строку на пробелы
+
       if (napravlenie == defaultValue ||
         (!fio || fio.length < 3) ||
-        (!tel || (tel.length === 22 && !telRegExp.test(tel)))) {
+        (!tel || (tel.length === 22 && !telRegExp.test(tel))) ||
+        (areaRef.current && area.length < 1)) {
 
         if (napravlenie == defaultValue) setIsSelectValid(false);
         if (!fio || fio.length < 3) setIsFioValid(false);
         if (!tel || !telRegExp.test(tel)) setIsTelValid(false);
+        if (areaRef.current && area.length < 1) setIsAreaValid(false);
         return false;
       }
 
@@ -75,6 +83,7 @@ export default function FormForRew() {
         </div>
         <div className={`review-form--inpt ${!isFioValid && 'invalid'}`}><InputFio fioRef={fioRef} setIsFioValid={setIsFioValid} /></div>
         <div className={`review-form--inpt ${!isTelValid && 'invalid'}`}><InputPhone telRef={telRef} setIsTelValid={setIsTelValid} /></div>
+        <div className={`review-form--inpt ${!isAreaValid && 'invalid'}`}><TextArea areaRef={areaRef} setIsAreaValid={setIsAreaValid} /></div>
         <div className='review-form--bt'><input className='form-elem button' type="submit" name='submit' value='Отправить' /></div>
       </form>
     </div>
