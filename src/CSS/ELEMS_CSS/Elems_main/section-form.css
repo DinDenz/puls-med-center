@@ -96,7 +96,6 @@
 .form-elem, .pseudo-select {
     background-color: transparent;
     color: white;
-    font-size: 1rem;
     width: 100%;
 }
 .pseudo-select {
