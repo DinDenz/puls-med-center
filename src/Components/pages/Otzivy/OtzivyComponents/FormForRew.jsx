@@ -70,7 +70,9 @@ export default function FormForRew() {
         onSubmit={handleSubmit}
         onKeyDown={(e) => (e.key === 'Enter') ? e.preventDefault() : ''}
         encType="multipart/form-data">
-        <CustomSelect data={dataForSelect} isSelectValid={isSelectValid} defaultValue={defaultValue} selectedValue={selectedValue} setSelectedValue={setSelectedValue} spanRef={spanRef} setIsSelectValid={setIsSelectValid} />
+        <div className='review-form-cust-sel'>
+          <CustomSelect data={dataForSelect} isSelectValid={isSelectValid} defaultValue={defaultValue} selectedValue={selectedValue} setSelectedValue={setSelectedValue} spanRef={spanRef} setIsSelectValid={setIsSelectValid} />
+        </div>
         <div className={`review-form--inpt ${!isFioValid && 'invalid'}`}><InputFio fioRef={fioRef} setIsFioValid={setIsFioValid} /></div>
         <div className={`review-form--inpt ${!isTelValid && 'invalid'}`}><InputPhone telRef={telRef} setIsTelValid={setIsTelValid} /></div>
         <div className='review-form--bt'><input className='form-elem button' type="submit" name='submit' value='Отправить' /></div>
