@@ -31,7 +31,7 @@ export default function CustomSelect({ setIsSelectValid, isSelectValid, defaultV
     }, [selectedValue]);
 
     return (
-        <div className={`form-elem-containter ${open ? 'openbord' : ''} ${!isSelectValid && 'invalid'}`}>
+        <div className={`inner ${open ? 'openbord' : ''} ${!isSelectValid && 'invalid'}`}>
             <select name="Napravlenie" className='real-select'>
                 {data.map((item) => (
                     <option key={item.value} value={item.value}>{item.text}</option>
