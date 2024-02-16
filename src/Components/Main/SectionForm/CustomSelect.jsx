@@ -1,9 +1,17 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { useOpen } from '../../hooks/useOpen';
 
 export default function CustomSelect({ setIsSelectValid, isSelectValid, defaultValue, selectedValue, setSelectedValue, spanRef }) {
     const { open, setOpen, ref, dropRef, toggleDrop } = useOpen(); //функционал по открытию-закрытию выпадающего псевдоселекта
-
+    const data = [
+        { value: "Направления", text: "Направления" },
+        { value: "Кардиология", text: "Кардиология" },
+        { value: "Детская кардиология", text: "Детская кардиология" },
+        { value: "Беременным", text: "Беременным" },
+        { value: "Ревматология", text: "Ревматология" },
+        { value: "Диагностика", text: "Диагностика" },
+        { value: "Лабораторная диагностика", text: "Лабораторная диагностика" },
+    ]
     //функционал по назначению измени спана в кнопке по выбранному селекту
     useEffect(() => {
         (selectedValue != defaultValue) ? spanRef.current.style.opacity = "1" :
@@ -34,13 +42,9 @@ export default function CustomSelect({ setIsSelectValid, isSelectValid, defaultV
     return (
         <div className={`form-elem-containter ${open ? 'openbord' : ''} ${!isSelectValid && 'invalid'}`}>
             <select name="Napravlenie" className='real-select'>
-                <option value="Направления">Направления</option>
-                <option value="Кардиология">Кардиология</option>
-                <option value="Детская кардиология">Детская кардиология</option>
-                <option value="Беременным">Беременным</option>
-                <option value="Ревматология">Ревматология</option>
-                <option value="Диагностика">Диагностика</option>
-                <option value="Лабораторная диагностика">Лабораторная диагностика</option>
+                {data.map((item) => (
+                    <option key={item.value} value={item.value}>{item.text}</option>
+                ))}
             </select>
             <div id="pseudoSelect" className="pseudo-select" ref={ref}>
                 <button onClick={toggleDrop}
@@ -48,13 +52,9 @@ export default function CustomSelect({ setIsSelectValid, isSelectValid, defaultV
                 <div ref={dropRef}
                     onClick={handleClickOnPsSelDrop}
                     className={open ? 'pseudo-select__drop yes' : 'pseudo-select__drop none'}>
-                    <div className='pseudo-select__item'>Направления</div>
-                    <div className='pseudo-select__item'>Кардиология</div>
-                    <div className='pseudo-select__item'>Детская кардиология</div>
-                    <div className='pseudo-select__item'>Беременным</div>
-                    <div className='pseudo-select__item'>Ревматология</div>
-                    <div className='pseudo-select__item'>Диагностика</div>
-                    <div className='pseudo-select__item'>Лабораторная диагностика</div>
+                    {data.map((item) => (
+                        <div key={item.value} className='pseudo-select__item'>{item.text}</div>
+                    ))}
                 </div>
             </div>
         </div>
