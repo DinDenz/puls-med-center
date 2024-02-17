@@ -2,7 +2,8 @@ import React, { useRef, useState } from 'react';
 import InputFio from '../../../Main/SectionForm/InputFio';
 import InputPhone from '../../../Main/SectionForm/InputPhone';
 import CustomSelect from '../../../Main/SectionForm/CustomSelect';
-import TextArea from './TextArea'
+import TextArea from './TextArea';
+import useFormValidation from './../../../hooks/useFormValidation'
 
 export default function FormForRew() {
   const [isFioValid, setIsFioValid] = useState(true);//валидность ФИО
@@ -16,12 +17,24 @@ export default function FormForRew() {
   const spanRef = useRef();
   const defaultValue = "Выберите тему";
   const [selectedValue, setSelectedValue] = useState(defaultValue);//отображается в псевдоселекте как выбранное
+  //объект для селекта
   const dataForSelect = [
     { value: "Выберите тему", text: "Выберите тему" },
     { value: "Благодарность", text: "Благодарность" },
     { value: "Жалоба", text: "Жалоба" },
     { value: "Предложение", text: "Предложение" },
   ]
+  //хук валидаци
+  const validateFormData = useFormValidation({
+    defaultValue,
+    setIsFioValid,
+    setIsTelValid,
+    setIsSelectValid,
+    areaRef,
+    setIsAreaValid,
+    includeTextarea: true,
+  });
+  //обработка сабмита
   const handleSubmit = (e) => {
     e.preventDefault();
     if (e.nativeEvent.submitter.name !== 'submit') return   //условие написал так как онсабмит происходил при каждом изменении значения поля формы, a так он проиходит только при клике на сабмит
@@ -39,25 +52,6 @@ export default function FormForRew() {
     const isValid = validateFormData(napravlenie, fio, tel, area);
     setIsFormValid(isValid);
 
-    function validateFormData(napravlenie, fio, tel, area) {
-      // проверка правильности заполнения полей в общем и индивидуально
-      const telRegExp = /^\+375\(\d{2}\) \d{3} - \d{2} - \d{2}$/;
-      /*console.log(tel.includes("_") ? 'true' : 'false')*/ //еще один способ проверить строку на пробелы
-
-      if (napravlenie == defaultValue ||
-        (!fio || fio.length < 3) ||
-        (!tel || (tel.length === 22 && !telRegExp.test(tel))) ||
-        (areaRef.current && area.length < 1)) {
-
-        if (napravlenie == defaultValue) setIsSelectValid(false);
-        if (!fio || fio.length < 3) setIsFioValid(false);
-        if (!tel || !telRegExp.test(tel)) setIsTelValid(false);
-        if (areaRef.current && area.length < 1) setIsAreaValid(false);
-        return false;
-      }
-
-      return true;
-    };
     if (isValid) {
       for (let [name, value] of formData) {
         console.log(`${name} = ${value}`);
@@ -75,12 +69,23 @@ export default function FormForRew() {
         onKeyDown={(e) => (e.key === 'Enter') ? e.preventDefault() : ''}
         encType="multipart/form-data">
         <div className='review-form-cust-sel'>
-          <CustomSelect data={dataForSelect} isSelectValid={isSelectValid} defaultValue={defaultValue} selectedValue={selectedValue} setSelectedValue={setSelectedValue} spanRef={spanRef} setIsSelectValid={setIsSelectValid} />
+          <CustomSelect data={dataForSelect}
+            isSelectValid={isSelectValid} defaultValue={defaultValue}
+            selectedValue={selectedValue} setSelectedValue={setSelectedValue}
+            spanRef={spanRef} setIsSelectValid={setIsSelectValid} />
         </div>
-        <div className={`review-form--inpt ${!isFioValid && 'invalid'}`}><InputFio setIsFioValid={setIsFioValid} /></div>
-        <div className={`review-form--inpt ${!isTelValid && 'invalid'}`}><InputPhone setIsTelValid={setIsTelValid} /></div>
-        <div className={`review-form--inpt ${!isAreaValid && 'invalid'}`}><TextArea areaRef={areaRef} setIsAreaValid={setIsAreaValid} /></div>
-        <div className='review-form--bt'><input className='form-elem button' type="submit" name='submit' value='Отправить' /></div>
+        <div className={`review-form--inpt ${!isFioValid && 'invalid'}`}>
+          <InputFio setIsFioValid={setIsFioValid} />
+        </div>
+        <div className={`review-form--inpt ${!isTelValid && 'invalid'}`}>
+          <InputPhone setIsTelValid={setIsTelValid} />
+        </div>
+        <div className={`review-form--inpt ${!isAreaValid && 'invalid'}`}>
+          <TextArea areaRef={areaRef} setIsAreaValid={setIsAreaValid} />
+        </div>
+        <div className='review-form--bt'>
+          <input className='form-elem button' type="submit" name='submit' value='Отправить' />
+        </div>
       </form>
     </div>
   )
