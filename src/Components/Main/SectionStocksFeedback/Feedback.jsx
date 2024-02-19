@@ -19,7 +19,7 @@ export default function Feedback() {
                 <div className="feedback-head__row">
                     <div className="feedback-head__title font-roboto-bold">Отзывы</div>
                     <div className="feedback-head__link">
-                        <a href="#" className="feedback-link">Больше отзывов</a>
+                        <a href="/otzivy" className="feedback-link">Больше отзывов</a>
                     </div>
                 </div>
             </div>
