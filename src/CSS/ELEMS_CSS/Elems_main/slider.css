@@ -112,7 +112,7 @@
         right: 28%;
     }
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 870px){
     .slider .slick-arrow {
         display: none;
     }
