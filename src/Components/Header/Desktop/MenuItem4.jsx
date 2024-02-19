@@ -7,7 +7,7 @@ export default function MenuItem4() {
             <div className="menu__submenu submenu">
                 <div className='submenu__list'>
                     <div className="submenu__item">
-                        <a href="#">ылоарлывоарлыво</a>
+                        <a href="#">Lorem</a>
                     </div>
                 </div>
             </div>
