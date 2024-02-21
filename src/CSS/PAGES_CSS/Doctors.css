@@ -2,9 +2,20 @@
 padding: 10px 25px;
 }
 .doctors-filter {
-height: 100px;
 margin-bottom: 20px;
-border: 1px solid blue;
+padding: 25px 20px;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+}
+.filter {
+    flex: 0 0 37%;
+    border: 1px solid rgba(170,170,170,0.8);
+    border-radius: 25px;
+}
+.filter .pseudo-select__toggle span {
+    color:var(--middle-opacity-black-color);
+    opacity: 0.8;
 }
 .doctors-body {
  padding: 0 20px;
@@ -62,6 +73,9 @@ border: 1px solid blue;
         flex: 0 0 32%;
         max-width: 32%;
     }
+    .filter {
+        flex: 0 0 50%;
+    }
 }
 @media screen and (max-width: 768px) {
     .doc-card {
@@ -70,6 +84,9 @@ border: 1px solid blue;
     }
 }
 @media screen and (max-width: 576px) {
+    .filter {
+        flex: 0 0 100%;
+    }
     .doctors-body {
         padding: 0;
     }

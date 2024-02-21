@@ -12,7 +12,7 @@ export default function CustomSelect({ setIsSelectValid, isSelectValid, defaultV
     function handleClickOnPsSelDrop(event) {
         const ev = event.target;
         if (ev.className !== "pseudo-select__item") return;
-        if (ev.textContent === "Направления") return;
+        if (ev.textContent === defaultValue) return;
         setSelectedValue(ev.textContent);
         setOpen(false);
     }
