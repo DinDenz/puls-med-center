@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-export default function InputFio({ fioRef, setIsFioValid }) {
+export default function InputFio({ setIsFioValid }) {
     const [inputValue, setInputValue] = useState('');
 
     function handleChange(e) {
@@ -12,7 +12,6 @@ export default function InputFio({ fioRef, setIsFioValid }) {
 
     return (
         <input className='form-elem'
-            ref={fioRef}
             onChange={handleChange}
             value={inputValue}
             type="text"

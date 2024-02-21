@@ -45,9 +45,9 @@ export default function MobBurger() {
             },
         },
         { id: 3, value: "Контакты", href: "/main" },
-        { id: 4, value: "О нас", href: "/main" },
-        { id: 5, value: "Врачи", href: "/main" },
-        { id: 6, value: "Отзывы", href: "/main" },
+        { id: 4, value: "О нас", href: "/about" },
+        { id: 5, value: "Врачи", href: "/doctors" },
+        { id: 6, value: "Отзывы", href: "/otzivy" },
     ]
 
     function toggle() {

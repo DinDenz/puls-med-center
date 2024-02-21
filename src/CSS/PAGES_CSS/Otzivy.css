@@ -1,0 +1,105 @@
+/*-------------------------------------*/
+.section-rev-list {
+    padding: 0 50px;
+    margin-bottom: 20px;
+}
+.feedback-main__rating{
+    font-weight: 500;
+    margin-top: 7px;
+    font-style: italic;
+}
+/*--------------------------------------------*/
+.review-form-title {
+    font-size: 1.9rem;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.review-form-container {
+    padding: 30px 0;
+}
+.review-form {
+   display: flex;
+   flex-direction: column; 
+   max-width: 450px;
+   margin: 0 auto;
+}
+.review-form--inpt, .review-form-cust-sel .inner {
+    border: 1px solid rgba(170,170,170,0.8);
+    border-radius: 25px;
+}
+.review-form--inpt, .review-form-cust-sel {
+    margin-bottom: 10px;
+}
+.review-form .form-elem {
+    border-radius: 25px;
+}
+.review-form .form-elem:focus,
+.textarea-review:focus {
+    box-shadow: 0 0 3px var(--main-color-full);
+}
+.review-form-cust-sel .pseudo-select__toggle {
+    padding: 10px 15px;
+}
+.review-form-cust-sel .pseudo-select__toggle span {
+    color:var(--middle-opacity-black-color);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+.review-form-cust-sel .inner.openbord  {
+    border-radius: 25px 25px 0 0;
+}
+.review-form-cust-sel .pseudo-select__drop.yes {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 25px 25px;
+    overflow-y: hidden;
+    left: -1px;
+    height: auto;
+}
+.review-form--inpt .form-elem {
+    background-color: transparent;
+    color: var(--middle-opacity-black-color);
+    font-size: 0.9rem;
+    width: 100%;
+    padding: 10px 15px;
+}
+.review-form--inpt .form-elem::placeholder {
+    color:var(--middle-opacity-black-color);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+.review-form--bt>.form-elem.button {
+    color: white;
+    background-color: var(--main-color);
+    position: static;
+    max-width: 140px;
+}
+.review-form--bt>.form-elem.button:hover {
+    background-color: var(--colored-button-hover-color);
+}
+/*.review-form--inpt.invalid>input,
+.review-form--inpt.invalid>input::placeholder {
+    color: rgba(194, 28, 28, 0.8);
+    transition: 0.15s;
+}*/
+.review-form-cust-sel .inner.invalid,.review-form--inpt.invalid {
+    border: 1px solid rgba(194, 28, 28, 1);
+}
+.textarea-review {
+    overflow: auto;
+    resize: vertical;
+    display: block;
+    width: 100%;
+    padding: 10px 15px 10px 20px;
+    font-size: 1rem;
+    line-height: 1.2;
+    color:var(--middle-opacity-black-color);
+    border-radius: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: all 0.2s ease;
+}
+.textarea-review:placeholder {
+    color:var(--middle-opacity-black-color);
+}

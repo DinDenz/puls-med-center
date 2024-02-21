@@ -49,6 +49,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 @import url("./ELEMS_CSS/header.css");
 @import url("./ELEMS_CSS/footer.css");
 @import url("./ELEMS_CSS/main.css");
+@import url("./PAGES_CSS/Otzivy.css");
+@import url("./PAGES_CSS/About.css");
+@import url("./PAGES_CSS/Doctors.css");
 
 /*-------шрифты------------------------------------------------------------*/
 

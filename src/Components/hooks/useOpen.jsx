@@ -6,6 +6,7 @@ export const useOpen = () => {
     const dropRef = useRef();
 
     const toggleDrop = (e) => {
+        e.preventDefault();
         setOpen(!open);
     };
 

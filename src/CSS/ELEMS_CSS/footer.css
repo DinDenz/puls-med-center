@@ -1,9 +1,13 @@
 .footer {
-    background-color:var(--main-color);
     display: flex;
     font-size: 1em;
     color: white;  
+    border-top: 1px solid rgba(220, 220, 220, 0.5);
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
+
 .footer-content {
     align-self: center;
     width: 100%;

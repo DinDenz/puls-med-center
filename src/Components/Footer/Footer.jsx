@@ -8,6 +8,7 @@ import Diagnostika from './Diagnostika';
 function Footer() {
     return (
         <div className='footer'>
+            <div className="back"></div>
             <div className="container footer-content">
                 <div className="footer-row">
                     <div className='footer-row-top'>

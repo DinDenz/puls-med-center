@@ -49,7 +49,6 @@
     transition: all 0.3s;
     white-space: nowrap;
     color:rgba(255, 255, 255, 0.9);
-    transition: 0.3s;
     cursor: pointer;
 }
 .button:hover, .drop-mob-but:hover {
@@ -80,15 +79,19 @@
     flex: 1 1 40%;
 }
 
-.navigation__col--menu a {
+.nav-link {
     display: block;
     color: var(--middle-opacity-black-color);
     font-size: 0.9rem;
     padding: 5px 10px;
-    transition: 0.3s;
+    transition: 0.15s;
 }
-.navigation__col--menu a:hover {
+.nav-link:hover:not(.active-link) {
     color:var(--main-color-full)
+}
+.active-link {
+	color: rgb(214, 164, 25);
+    cursor: default;
 }
 /*-----------------------------------------------------*/
 .navigation__col--search {
@@ -295,7 +298,7 @@ input[type="search"]::-webkit-search-decoration {
     position: absolute;
     z-index: 20;
     box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
-    top:100%;
+    top:98%;
     left:0;
     padding: 10px 15px;
     text-align: left;

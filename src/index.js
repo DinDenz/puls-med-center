@@ -1,5 +1,6 @@
 import React from 'react';
 import * as ReactDOMClient from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import './CSS/index.css';
 import './FONTS/Roboto/Roboto-Black.ttf';
 import './FONTS/Roboto/Roboto-Bold.ttf';
@@ -10,6 +11,9 @@ import reportWebVitals from './reportWebVitals';
 
 const app = ReactDOMClient.createRoot(document.getElementById('app'));
 app.render(
-  <App />
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+
 );
 

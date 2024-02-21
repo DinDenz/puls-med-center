@@ -1,40 +1,80 @@
 import React from 'react'
 
 export default function MenuItem3() {
+    const medicalIssled = {
+        col1: [
+            {
+                id: "Компьютерная томография",
+                name: "Компьютерная томография",
+                href: "#"
+            },
+            {
+                id: "МРТ",
+                name: "МРТ",
+                href: "#"
+            },
+            {
+                id: "КТ и МРТ с контрастированием",
+                name: "КТ и МРТ с контрастированием",
+                href: "#"
+            }
+        ],
+        col2: [
+            {
+                id: "Электрокардиография (ЭКГ)",
+                name: "Электрокардиография (ЭКГ)",
+                href: "#"
+            },
+            {
+                id: "УЗИ сердца",
+                name: "УЗИ сердца",
+                href: "#"
+            },
+            {
+                id: "Чрезпищеводное УЗИ сердца (ЧП ЭХО-КГ)",
+                name: "Чрезпищеводное УЗИ сердца (ЧП ЭХО-КГ)",
+                href: "#"
+            }
+        ],
+        col3: [
+            {
+                id: "Сцинтиграфия миокарда",
+                name: "Сцинтиграфия миокарда",
+                href: "#"
+            },
+            {
+                id: "Нагрузочные исследования(тридмил-тест)",
+                name: "Нагрузочные исследования(тридмил-тест)",
+                href: "#"
+            }
+        ]
+    };
+
     return (
         <div className="menu__item item-3">
             <a href="#">Диагностика</a>
             <div className="menu__submenu submenu">
                 <div className='submenu__list-3'>
                     <div className='list3__col'>
-                        <div className="submenu__item">
-                            <a href="#">Компьютерная томография</a>
-                        </div>
-                        <div className="submenu__item">
-                            <a href="#">МРТ</a>
-                        </div>
-                        <div className="submenu__item">
-                            <a href="#">КТ и МРТ с контрастированием</a>
-                        </div>
+                        {medicalIssled.col1.map((item) => (
+                            <div key={item.id} className="submenu__item">
+                                <a href={item.href}>{item.name}</a>
+                            </div>
+                        ))}
                     </div>
                     <div className='list3__col'>
-                        <div className="submenu__item">
-                            <a href="#">Электрокардиография (ЭКГ)</a>
-                        </div>
-                        <div className="submenu__item">
-                            <a href="#">УЗИ сердца</a>
-                        </div>
-                        <div className="submenu__item">
-                            <a href="#">Чрезпищеводное УЗИ сердца (ЧП ЭХО-КГ)</a>
-                        </div>
+                        {medicalIssled.col2.map((item) => (
+                            <div key={item.id} className="submenu__item">
+                                <a href={item.href}>{item.name}</a>
+                            </div>
+                        ))}
                     </div>
                     <div className='list3__col'>
-                        <div className="submenu__item">
-                            <a href="#">Сцинтиграфия миокарда</a>
-                        </div>
-                        <div className="submenu__item">
-                            <a href="#">Нагрузочные исследования(тридмил-тест)</a>
-                        </div>
+                        {medicalIssled.col3.map((item) => (
+                            <div key={item.id} className="submenu__item">
+                                <a href={item.href}>{item.name}</a>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
