@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Icon from '../../common/Icon';
 import ContactsAll from './ContactsAll';
 import { ReactComponent as SearchIco } from '../../../IMG/iconSearch.svg';
@@ -7,9 +8,9 @@ export default function NavigationRowTop() {
     return (
         <div className='navigation__row navigation__row--top'>
             <div className="navigation__col navigation__col--menu">
-                <a href="/about">О нас</a>
-                <a href="/doctors">Врачи</a>
-                <a href="/otzivy">Отзывы</a>
+                <NavLink className={({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link'} to="/about">О нас</NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link'} to="/doctors">Врачи</NavLink>
+                <NavLink className={({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link'} to="/otzivy">Отзывы</NavLink>
             </div>
             <div className="navigation__col navigation__col--search">
                 <form action="#" method='GET'>

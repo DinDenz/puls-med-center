@@ -79,15 +79,19 @@
     flex: 1 1 40%;
 }
 
-.navigation__col--menu a {
+.nav-link {
     display: block;
     color: var(--middle-opacity-black-color);
     font-size: 0.9rem;
     padding: 5px 10px;
-    transition: 0.3s;
+    transition: 0.15s;
 }
-.navigation__col--menu a:hover {
+.nav-link:hover:not(.active-link) {
     color:var(--main-color-full)
+}
+.active-link {
+	color: rgb(214, 164, 25);
+    cursor: default;
 }
 /*-----------------------------------------------------*/
 .navigation__col--search {
