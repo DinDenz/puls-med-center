@@ -5,12 +5,13 @@ import ContactsAll from './ContactsAll';
 import { ReactComponent as SearchIco } from '../../../IMG/iconSearch.svg';
 
 export default function NavigationRowTop() {
+    const setActive = ({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link';
     return (
         <div className='navigation__row navigation__row--top'>
             <div className="navigation__col navigation__col--menu">
-                <NavLink className={({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link'} to="/about">О нас</NavLink>
-                <NavLink className={({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link'} to="/doctors">Врачи</NavLink>
-                <NavLink className={({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link'} to="/otzivy">Отзывы</NavLink>
+                <NavLink className={setActive} to="/about">О нас</NavLink>
+                <NavLink className={setActive} to="/doctors">Врачи</NavLink>
+                <NavLink className={setActive} to="/otzivy">Отзывы</NavLink>
             </div>
             <div className="navigation__col navigation__col--search">
                 <form action="#" method='GET'>
