@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import SectionForm from '../../Main/SectionForm/SectionForm';
 import DocCard from './DocCard';
 import doctors from './DoctorsData';
@@ -6,17 +6,26 @@ import DoctorsFilter from './DoctorsFilter';
 
 export default function Doctors() {
   const dataForFilter = [
-    { value: "Специальность", text: "Специальность" },
+    { value: "Все специальности", text: "Все специальности" },
     { value: "Кардиология", text: "Кардиология" },
     { value: "Детская кардиология", text: "Детская кардиология" },
     { value: "УЗИ", text: "УЗИ" },
     { value: "Ревматология", text: "Ревматология" },
     { value: "Рентгенология", text: "Рентгенология" },
-    { value: "Хирургия", text: "Хирургия" },
+    { value: "Кардиохирургия", text: "Кардиохирургия" },
   ]
-  const defaultValue = 'Специальность';
+  const defaultValue = 'Все специальности';
   const [filterValue, setFilterValue] = useState(defaultValue);
   const spanRef = useRef();
+  const [chosenDocs, setChosenDocs] = useState(doctors);
+  useEffect(() => {
+    if (filterValue === defaultValue) {
+      setChosenDocs(doctors);
+    } else {
+      setChosenDocs(doctors.filter((doctor) => doctor.specialty.toLowerCase() === filterValue.toLowerCase()));
+    }
+  }, [filterValue]);
+  
 
   return (
     <div className='main'>
@@ -37,7 +46,7 @@ export default function Doctors() {
           </div>
           <div className="doctors-body">
             <div className="doc-cards">
-              {doctors.map((doctor) => (
+              {chosenDocs.map((doctor) => (
                 <DocCard key={doctor.id}
                   name={doctor.name}
                   specialty={doctor.specialty}

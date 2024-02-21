@@ -13,7 +13,7 @@ export default function DoctorsFilter({ defaultValue, filterValue, setFilterValu
     function handleClick(event) {
         const ev = event.target;
         if (ev.className !== "pseudo-select__item") return;
-        if (ev.textContent === defaultValue) return;
+
         setFilterValue(ev.textContent);
         setOpen(false);
     }

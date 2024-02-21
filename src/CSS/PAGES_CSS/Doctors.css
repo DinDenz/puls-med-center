@@ -17,6 +17,15 @@ justify-content: flex-start;
     color:var(--middle-opacity-black-color);
     opacity: 0.8;
 }
+.filter .pseudo-select__item:first-child {
+    color:var(--middle-opacity-black-color);
+    opacity: 1;
+    cursor: pointer;
+}
+.filter .pseudo-select__item:hover:first-child {
+    color: var(--main-color-full);
+    background-color: rgb(219, 217, 217);
+}
 .doctors-body {
  padding: 0 20px;
 }
@@ -85,10 +94,14 @@ justify-content: flex-start;
 }
 @media screen and (max-width: 576px) {
     .filter {
-        flex: 0 0 100%;
+        flex: 0 0 80%;
     }
     .doctors-body {
         padding: 0;
+    }
+    .doctors-filter {
+        padding: 20px 7px;
+        justify-content: center;
     }
     .doc-cards {
         display: flex;
@@ -106,6 +119,9 @@ justify-content: flex-start;
     }
 }
 @media screen and (max-width: 420px) {
+    .filter {
+        flex: 0 0 100%;
+    }
     .doc-card {
         flex: 0 0 90%;
         max-width: 90%;
