@@ -13,12 +13,11 @@ export default function DoctorsFilter({ defaultValue, filterValue, setFilterValu
     function handleClick(event) {
         const ev = event.target;
         if (ev.className !== "pseudo-select__item") return;
-
         setFilterValue(ev.textContent);
         setOpen(false);
     }
     return (
-        <div className='filter'>
+        <div className={`filter ${open ? 'openbord' : ''}`}>
             <div className="pseudo-select" ref={ref}>
                 <button onClick={toggleDrop}
                     className='pseudo-select__toggle'><span ref={spanRef}>{filterValue}</span></button>

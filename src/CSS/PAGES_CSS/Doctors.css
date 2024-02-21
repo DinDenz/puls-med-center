@@ -13,6 +13,10 @@ justify-content: flex-start;
     border: 1px solid rgba(170,170,170,0.8);
     border-radius: 25px;
 }
+.filter.openbord {
+    border-radius: 25px 25px 0 0;
+    border: 1px solid var(--main-color-full);
+}
 .filter .pseudo-select__toggle span {
     color:var(--middle-opacity-black-color);
     opacity: 0.8;
@@ -32,12 +36,13 @@ justify-content: flex-start;
 .doc-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between ;
+    margin: 0 -10px;
 }
 .doc-card {
-    flex: 0 0 24%;
-    max-width: 24%;
+    flex: 0 0 25%;
+    max-width: 25%;
     margin: 0 0 20px 0;
+    padding: 0 10px;
 }
 .doc-card a {
     height: 100%;
@@ -79,8 +84,8 @@ justify-content: flex-start;
 }
 @media screen and (max-width: 1025px) {
     .doc-card {
-        flex: 0 0 32%;
-        max-width: 32%;
+        flex: 0 0 33%;
+        max-width: 33%;
     }
     .filter {
         flex: 0 0 50%;
@@ -88,8 +93,8 @@ justify-content: flex-start;
 }
 @media screen and (max-width: 768px) {
     .doc-card {
-        flex: 0 0 48.5%;
-        max-width: 48.5%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 }
 @media screen and (max-width: 576px) {
@@ -137,7 +142,7 @@ justify-content: flex-start;
     }
 }
 .doc-info {
-    padding: 10px 15px 20px;
+    padding: 10px 10px 20px 15px;
     display: flex;
     flex-direction: column;
 }
