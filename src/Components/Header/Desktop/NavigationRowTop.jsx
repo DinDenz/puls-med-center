@@ -6,12 +6,15 @@ import { ReactComponent as SearchIco } from '../../../IMG/iconSearch.svg';
 
 export default function NavigationRowTop() {
     const setActive = ({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link';
+    function clickNavLinkHandler() {
+        document.documentElement.scrollIntoView({behavior: "smooth"});
+    }
     return (
         <div className='navigation__row navigation__row--top'>
             <div className="navigation__col navigation__col--menu">
-                <NavLink className={setActive} to="/about">О нас</NavLink>
-                <NavLink className={setActive} to="/doctors">Врачи</NavLink>
-                <NavLink className={setActive} to="/otzivy">Отзывы</NavLink>
+                <NavLink onClick={clickNavLinkHandler} className={setActive} to="/about">О нас</NavLink>
+                <NavLink onClick={clickNavLinkHandler} className={setActive} to="/doctors">Врачи</NavLink>
+                <NavLink onClick={clickNavLinkHandler} className={setActive} to="/otzivy">Отзывы</NavLink>
             </div>
             <div className="navigation__col navigation__col--search">
                 <form action="#" method='GET'>

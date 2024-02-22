@@ -32,7 +32,7 @@ export default function MobBurgerMenu({ itemsAc, open, setOpen }) {
                 <div className='menu__items'>
                     <ul>
                         {itemsAc.map((itemA) =>
-                            <MobBurgerItem key={itemA.id} item={itemA} />
+                            <MobBurgerItem key={itemA.id} item={itemA} setOpen ={setOpen}/>
                         )}
                     </ul>
                 </div>

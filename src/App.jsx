@@ -14,7 +14,7 @@ function App() {
     <div className="wrapper font-roboto-regular">
       <Header />
       <Routes>
-        <Route path="/puls-med-center" element={<Main />}></Route>
+        <Route path="*" element={<Main />}></Route>
         <Route path='/otzivy' element={<Otzivy />}></Route>
         <Route path='/doctors' element={<Doctors />}></Route>
         <Route path='/about' element={<About />}></Route>
