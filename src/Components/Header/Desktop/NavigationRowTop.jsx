@@ -7,7 +7,7 @@ import { ReactComponent as SearchIco } from '../../../IMG/iconSearch.svg';
 export default function NavigationRowTop() {
     const setActive = ({ isActive }) => isActive ? 'nav-link active-link' : 'nav-link';
     function clickNavLinkHandler() {
-        document.documentElement.scrollTo(0, 0);
+        document.documentElement.scrollIntoView({behavior: "smooth"});
     }
     return (
         <div className='navigation__row navigation__row--top'>

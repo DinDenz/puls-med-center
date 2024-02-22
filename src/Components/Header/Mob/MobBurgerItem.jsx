@@ -13,7 +13,7 @@ export default function MobBurgerItem({ item, setOpen }) {
     }
     function clickLinkHandler() {
         setOpen(false); // проп прилетевший бургер меню
-        document.documentElement.scrollTo(0,0);
+        document.documentElement.scrollIntoView({ behavior: "smooth" });
     }
 
     return (
