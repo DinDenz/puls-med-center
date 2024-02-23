@@ -19,6 +19,7 @@ const useFormValidation = ({
             if (!fio || fio.length < 3) setIsFioValid(false);
             if (!tel || !telRegExp.test(tel)) setIsTelValid(false);
             if (includeTextarea && areaRef.current && area.length < 1) setIsAreaValid(false);
+            //console.log(napravlenie);
             return false;
         }
 

@@ -18,8 +18,11 @@ export default function CustomSelect({ setIsSelectValid, isSelectValid, defaultV
     }
     /*--------------------------------------------------------------------------------*/
     //функционал по передаче значения в реал-селект 
+    //поиск по дата атрибуту использовал так как на страницус отзывами есть 2 компонента с кастом селектом
+    //и данный поиск по имени класса находит первый из них тогда, когда нужен второй.
+    //так на странице может быть сколько угодно кастомных селектов и у всех будет свой дата-айди
     useEffect(() => {
-        const realSelect = document.querySelector(".real-select");
+        const realSelect = document.querySelector(`[data-id="${defaultValue}"]`);
         for (let option of realSelect.options) {
             (option.value === selectedValue) ? (option.selected = true) :
                 (option.selected = false);
@@ -32,7 +35,10 @@ export default function CustomSelect({ setIsSelectValid, isSelectValid, defaultV
 
     return (
         <div className={`inner ${open ? 'openbord' : ''} ${!isSelectValid && 'invalid'}`}>
-            <select name="Napravlenie" className='real-select'>
+            <select 
+            data-id = {defaultValue}
+            name="Napravlenie" 
+            className='real-select'>
                 {data.map((item) => (
                     <option key={item.value} value={item.value}>{item.text}</option>
                 ))}
