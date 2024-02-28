@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import * as ReactDOMClient from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import './CSS/index.css';
 import './FONTS/Roboto/Roboto-Black.ttf';
@@ -11,12 +11,12 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './store'
 
-ReactDOM.render(
+const app = ReactDOMClient.createRoot(document.getElementById('app'));
+app.render(
   <Provider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </Provider>,
-  document.getElementById('app')
+  </Provider>
 );
 
