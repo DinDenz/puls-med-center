@@ -3,31 +3,34 @@ import InputFio from '../../../Main/SectionForm/InputFio';
 import InputPhone from '../../../Main/SectionForm/InputPhone';
 import CustomSelect from '../../../Main/SectionForm/CustomSelect';
 import TextArea from './TextArea';
-import useFormValidation from './../../../hooks/useFormValidation'
+import useFormValidation from './../../../hooks/useFormValidation';
+import { useDispatch } from 'react-redux';
+import { addRev } from './../../../../store/reviewsSlice'
 
 export default function FormForRew() {
   const [isFioValid, setIsFioValid] = useState(true);//валидность ФИО
   const [isTelValid, setIsTelValid] = useState(true);//валидность телефона
   const [isSelectValid, setIsSelectValid] = useState(true);//валидность селекта
-  const [isFormValid, setIsFormValid] = useState(true);//валидность формы 
-  const [isAreaValid, setIsAreaValid] = useState(true);//валидность тексnареа
+  const [isFormValid, setIsFormValid] = useState(true);//валидность всей формы 
+  const [isAreaValid, setIsAreaValid] = useState(true);//валидность текстареа
   const [fioValue, setFioValue] = useState(''); //значение фио
   const [telValue, setTelValue] = useState(''); //значение телефона 
-  const [areaValue, setAreaValue] = useState('');//значение тексэриа
+  const [areaValue, setAreaValue] = useState('');//значение текстареа
+  const dispatch = useDispatch();
 
   const areaRef = useRef();
-  //customSelect
+  //------------------------------------------------------------customSelect
   const spanRef = useRef();
   const defaultValue = "Выберите тему";
   const [selectedValue, setSelectedValue] = useState(defaultValue);//отображается в псевдоселекте как выбранное
-  //объект для селекта
+  //-----------------------------------------------------------объект для селекта
   const dataForSelect = [
     { value: "Выберите тему", text: "Выберите тему" },
     { value: "Благодарность", text: "Благодарность" },
     { value: "Жалоба", text: "Жалоба" },
     { value: "Предложение", text: "Предложение" },
   ]
-  //хук валидаци
+  //-------------------------------------------------------------хук валидаци
   const validateFormData = useFormValidation({
     defaultValue,
     setIsFioValid,
@@ -37,6 +40,7 @@ export default function FormForRew() {
     setIsAreaValid,
     includeTextarea: true,
   });
+
   //обработка сабмита
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -56,13 +60,17 @@ export default function FormForRew() {
     setIsFormValid(isValid);
 
     if (isValid) {
-      for (let [name, value] of formData) {
+      for (let [name, value] of formData) {//---
         console.log(`${name} = ${value}`);
       }
-      setFioValue('');
-      setTelValue('');
-      setAreaValue('');
-      setSelectedValue(defaultValue);
+      function addValidatedReviewToList() {
+        dispatch(addRev({ fioValue, selectedValue, areaValue }))
+        setFioValue('');
+        setTelValue('');
+        setAreaValue('');
+        setSelectedValue(defaultValue);
+      }
+      addValidatedReviewToList();
     }
   }
   /*--------------------------------------------------------------*/

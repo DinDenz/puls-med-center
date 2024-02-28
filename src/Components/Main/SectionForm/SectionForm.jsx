@@ -55,7 +55,8 @@ export default function SectionForm() {
       }
       setFioValue('');
       setTelValue('');
-      setSelectedValue(defaultValue);//типа Отправка данных
+      setSelectedValue(defaultValue);
+      //далее Отправка данных формы
       /*fetch('url', {
         method: 'POST',
         body: formData
