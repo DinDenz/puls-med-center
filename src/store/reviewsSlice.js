@@ -10,7 +10,7 @@ const reviewsSlice = createSlice({
             console.log(action);
             console.log(state);
             state.reviews.push({
-                id: newDate().toISOString(),
+                id: new Date().toISOString(),
                 userName: action.payload.userName,
                 text: action.payload.text,
 
