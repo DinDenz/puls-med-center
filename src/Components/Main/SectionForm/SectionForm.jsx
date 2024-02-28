@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react';
+import SectionFormHead from './SectionFormHead'
 import InputPhone from './InputPhone';
 import CustomSelect from './CustomSelect';
 import InputFio from './InputFio';
+import dataForSelect from './dataForSelectList';
 import useFormValidation from "./../../hooks/useFormValidation";
 
 export default function SectionForm() {
@@ -15,16 +17,7 @@ export default function SectionForm() {
   const spanRef = useRef();
   const defaultValue = "Направления";
   const [selectedValue, setSelectedValue] = useState(defaultValue);//отображается в псевдоселекте как выбранное
-  //дата для селекта
-  const dataForSelect = [
-    { value: "Направления", text: "Направления" },
-    { value: "Кардиология", text: "Кардиология" },
-    { value: "Детская кардиология", text: "Детская кардиология" },
-    { value: "Беременным", text: "Беременным" },
-    { value: "Ревматология", text: "Ревматология" },
-    { value: "Диагностика", text: "Диагностика" },
-    { value: "Лабораторная диагностика", text: "Лабораторная диагностика" },
-  ]
+
   //хук валидации
   const validateFormData = useFormValidation({
     defaultValue,
@@ -83,11 +76,7 @@ export default function SectionForm() {
     <div className='section-form'>
       <div className="back"></div>
       <div className='section-form-content'>
-        <div className='section-form__head head'>
-          <div className="head__title font-roboto-bold">Оставить заявку</div>
-          <div className="head__subtitle">Заполните форму ниже (все поля обязательны) и
-            мы свяжемся с Вами в течение 15 минут</div>
-        </div>
+        <SectionFormHead />
         <div className='section-form__body'>
           <div className="body__content">
             <form
