@@ -1,19 +1,19 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-export default function TextArea({ areaRef, setIsAreaValid }) {
-    const [areaValue, setAreaValue] = useState('');
+export default function TextArea({ areaRef, setIsAreaValid, areaValue, setAreaValue }) {
 
     function handleChange(event) {
         setAreaValue(event.target.value)
     }
     useEffect(() => {
-        if (areaValue.length >= 1) setIsAreaValid(true);
+        if (areaValue && areaValue.length >= 1) setIsAreaValid(true);
     },
         [areaValue])
     return (
         <textarea name="textarea"
             maxLength="500"
+            value={areaValue}
             onChange={handleChange}
             ref={areaRef}
             className='textarea-review'

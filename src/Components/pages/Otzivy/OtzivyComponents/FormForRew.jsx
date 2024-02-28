@@ -11,6 +11,9 @@ export default function FormForRew() {
   const [isSelectValid, setIsSelectValid] = useState(true);//валидность селекта
   const [isFormValid, setIsFormValid] = useState(true);//валидность формы 
   const [isAreaValid, setIsAreaValid] = useState(true);//валидность тексnареа
+  const [fioValue, setFioValue] = useState(''); //значение фио
+  const [telValue, setTelValue] = useState(''); //значение телефона 
+  const [areaValue, setAreaValue] = useState('');//значение тексэриа
 
   const areaRef = useRef();
   //customSelect
@@ -56,6 +59,10 @@ export default function FormForRew() {
       for (let [name, value] of formData) {
         console.log(`${name} = ${value}`);
       }
+      setFioValue('');
+      setTelValue('');
+      setAreaValue('');
+      setSelectedValue(defaultValue);
     }
   }
   /*--------------------------------------------------------------*/
@@ -75,13 +82,13 @@ export default function FormForRew() {
             spanRef={spanRef} setIsSelectValid={setIsSelectValid} />
         </div>
         <div className={`review-form--inpt ${!isFioValid && 'invalid'}`}>
-          <InputFio setIsFioValid={setIsFioValid} />
+          <InputFio setIsFioValid={setIsFioValid} fioValue={fioValue} setFioValue={setFioValue} />
         </div>
         <div className={`review-form--inpt ${!isTelValid && 'invalid'}`}>
-          <InputPhone setIsTelValid={setIsTelValid} />
+          <InputPhone setIsTelValid={setIsTelValid} telValue={telValue} setTelValue={setTelValue} />
         </div>
         <div className={`review-form--inpt ${!isAreaValid && 'invalid'}`}>
-          <TextArea areaRef={areaRef} setIsAreaValid={setIsAreaValid} />
+          <TextArea areaRef={areaRef} setIsAreaValid={setIsAreaValid} areaValue={areaValue} setAreaValue={setAreaValue} />
         </div>
         <div className='review-form--bt'>
           <input className='form-elem button' type="submit" name='submit' value='Отправить' />

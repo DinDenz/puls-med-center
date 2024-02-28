@@ -20,7 +20,6 @@ export default function CustomSelect({ setIsSelectValid, isSelectValid, defaultV
     //функционал по передаче значения в реал-селект 
     //поиск по дата атрибуту использовал так как на страницус отзывами есть 2 компонента с кастом селектом
     //и данный поиск по имени класса находит первый из них тогда, когда нужен второй.
-    //так на странице может быть сколько угодно кастомных селектов и у всех будет свой дата-айди
     useEffect(() => {
         const realSelect = document.querySelector(`[data-id="${defaultValue}"]`);
         for (let option of realSelect.options) {

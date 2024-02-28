@@ -9,6 +9,8 @@ export default function SectionForm() {
   const [isTelValid, setIsTelValid] = useState(true);//валидность телефона
   const [isSelectValid, setIsSelectValid] = useState(true);//валидность селекта
   const [isFormValid, setIsFormValid] = useState(true);//валидность формы 
+  const [fioValue, setFioValue] = useState(''); //значение фио
+  const [telValue, setTelValue] = useState(''); //значение телефона 
   //customSelect
   const spanRef = useRef();
   const defaultValue = "Направления";
@@ -50,7 +52,10 @@ export default function SectionForm() {
     if (isValid) {
       for (let [name, value] of formData) {
         console.log(`${name} = ${value}`);
-      }//типа Отправка данных
+      }
+      setFioValue('');
+      setTelValue('');
+      setSelectedValue(defaultValue);//типа Отправка данных
       /*fetch('url', {
         method: 'POST',
         body: formData
@@ -97,10 +102,10 @@ export default function SectionForm() {
                   setIsSelectValid={setIsSelectValid} />
               </div>
               <div className={`form-elem-containter--inpt ${!isFioValid && 'invalid'}`}>
-                <InputFio setIsFioValid={setIsFioValid} />
+                <InputFio setIsFioValid={setIsFioValid} fioValue={fioValue} setFioValue={setFioValue} />
               </div>
               <div className={`form-elem-containter--inpt ${!isTelValid && 'invalid'}`}>
-                <InputPhone setIsTelValid={setIsTelValid} />
+                <InputPhone setIsTelValid={setIsTelValid} telValue={telValue} setTelValue={setTelValue} />
               </div>
               <div className='form-elem-containter--bt'>
                 <input className='form-elem button' type="submit" name='submit' value='Отправить' />
