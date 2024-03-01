@@ -25,7 +25,7 @@ export default function Doctors() {
       setChosenDocs(doctors.filter((doctor) => doctor.specialty.toLowerCase() === filterValue.toLowerCase()));
     }
   }, [filterValue]);
-  
+
 
   return (
     <div className='main'>
@@ -48,6 +48,7 @@ export default function Doctors() {
             <div className="doc-cards">
               {chosenDocs.map((doctor) => (
                 <DocCard key={doctor.id}
+                  docID={doctor.id}
                   name={doctor.name}
                   specialty={doctor.specialty}
                   category={doctor.category}
