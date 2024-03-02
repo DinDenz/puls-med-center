@@ -68,8 +68,8 @@ const reviewsSlice = createSlice({
     },
     reducers: {
         addRev(state, action) {
-            console.log(action);
-            console.log(state);
+            //console.log(action);
+            //console.log(state);
             state.reviews.unshift({
                 id: new Date().toISOString(),
                 userName: action.payload.fioValue,

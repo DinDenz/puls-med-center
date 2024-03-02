@@ -16,7 +16,7 @@ export default function DocPageForm({ currentDocName }) {
     });
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (e.nativeEvent.submitter.name !== 'submit') return;
+        //if (e.nativeEvent.submitter.name !== 'submit') return;
         setIsFioValid(true);
         setIsTelValid(true);
         const form = e.target;

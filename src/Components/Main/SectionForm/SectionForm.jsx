@@ -29,7 +29,7 @@ export default function SectionForm() {
   //обработка сабмита
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (e.nativeEvent.submitter.name !== 'submit') return   //условие написал так как онсабмит происходил при каждом изменении значения поля формы, a так он проиходит только при клике на сабмит
+    //if (e.nativeEvent.submitter.name !== 'submit') return   //условие написал так как онсабмит происходил при каждом изменении значения поля формы, a так он проиходит только при клике на сабмит
     //"обнуляю" стэйты полей, чтобы для тех полей,где значение исправлено на валидное,после экспентирования не оставалась подсветка  
     setIsSelectValid(true);
     setIsFioValid(true);
