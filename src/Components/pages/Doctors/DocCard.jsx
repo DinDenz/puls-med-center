@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function DocCard({ docID, name, specialty, category, experience, photo }) {
+export default function DocCard({ 
+    docID, 
+    name, 
+    specialty, 
+    category, 
+    experience, 
+    photo}) {
 
     return (
         <div className="doc-card">

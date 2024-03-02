@@ -1,0 +1,23 @@
+.doc-page {
+    padding: 20px 0;
+}
+.doc-page__name {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.doc-page__info {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid red;
+}
+.doc-page__photo, .doc-page__form {
+    min-height: 300px;
+    border: 1px solid green;
+    flex: 1 1 50%;
+}
+.doc-page__text {
+    min-height: 500px;
+    border: 1px solid yellow;
+    flex: 100%;
+}
