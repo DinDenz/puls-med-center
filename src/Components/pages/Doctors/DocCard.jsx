@@ -1,10 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function DocCard({ name, specialty, category, experience, photo }) {
-
+export default function DocCard({
+    docID,
+    name,
+    specialty,
+    category,
+    experience,
+    photo }) {
+    function clickLinkHandler() {
+        document.documentElement.scrollIntoView({ behavior: "smooth" });
+    }
     return (
-        <div className="doc-card">
-            <a href="#">
+        <div className="doc-card" onClick={clickLinkHandler}>
+            <Link to={`/doctors/${docID}`} >
                 <div className="doc-pic">
                     <img src={photo} alt="photo" />
                 </div>
@@ -14,7 +23,7 @@ export default function DocCard({ name, specialty, category, experience, photo }
                     <div className="doc-char">{category}</div>
                     <div className="doc-experience">{`Стаж : ${experience}`}</div>
                 </div>
-            </a>
+            </Link>
         </div>
     )
 }

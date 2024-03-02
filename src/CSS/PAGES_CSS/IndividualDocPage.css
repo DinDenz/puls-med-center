@@ -1,0 +1,203 @@
+.doc-page {
+    padding: 30px 55px;
+    margin: auto;
+}
+.note {
+    color: var(--middle-opacity-black-color);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
+.doc-page__name {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+.doc-page__info {
+    display: flex;
+    flex-wrap: wrap;
+}
+.doc-page__form-container p {
+    font-size: 1.8rem;
+    color:var(--low-opacity-black-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.doc-page__photo {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.doc-page__photo-container {
+    position: relative;
+    max-width: 300px;
+    height: 280px;
+    width: 100%;
+}
+.doc-page__photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+.doc-page__form-container {
+    flex-grow: 1;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.doc-page__text {
+    padding: 20px 0px;
+    flex: 100%;
+}
+.doc-page__text-ownway {
+    margin-bottom: 20px;
+    color: var(--middle-opacity-black-color);
+    line-height: 1.4;
+}
+.doc-page__text-point-title {
+    margin-bottom: 28px;
+}
+.doc-page__text-point-title span {
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: underline;
+    font-weight: 500;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+.doc-page__text ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 15px;
+    color: var(--middle-opacity-black-color);
+    line-height: 1.3;
+}
+.doc-page__text ul li::before {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    background-color: rgb(228, 119, 47);
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left:5px;
+    top:5px;
+}
+/*-------------------------------------------------*/
+.doc-page__form {
+    display: flex;
+    flex-direction: column; 
+    width: 500px;
+ }
+ .doc-page__form--inpt {
+    border: 1px solid rgba(170,170,170,0.8);
+    border-radius: 25px;
+    margin-bottom: 12px;
+ }
+ .doc-page__form .form-elem {
+    border-radius: 25px;
+}
+.doc-page__form--inpt .form-elem {
+    background-color: transparent;
+    color: var(--middle-opacity-black-color);
+    font-size: 0.9rem;
+    width: 100%;
+    padding: 10px 15px;
+}
+.doc-page__form .form-elem::placeholder {
+    color:var(--middle-opacity-black-color);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+.doc-page__form--bt>.form-elem.button {
+    color: white;
+    background-color: var(--main-color);
+    position: static;
+    max-width: 140px;
+}
+.doc-page__form--bt>.form-elem.button:hover {
+    background-color: var(--colored-button-hover-color);
+}
+.doc-page__form--inpt.invalid {
+    border: 1px solid rgba(194, 28, 28, 1);
+}
+@media screen and (max-width:992px) {
+    .doc-page {
+        padding: 30px 20px;
+    }
+    .doc-page__form {
+        width: 350px;
+     }
+     .doc-page__form-container {
+        padding: 10px 5px 10px 20px;
+     }
+     .doc-page__form-container p {
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width:768px) {
+    .doc-page__form {
+        width: 100%;
+     }
+     .doc-page__info {
+        display: flex;
+        flex-direction: column;
+    }
+    .doc-page__form-container p {
+        font-size: 1.5rem;
+        color:var(--low-opacity-black-color);
+    }
+    .doc-page__form-container {
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 30px 30px 10px 30px;
+    }
+    .doc-page__name {
+        font-size: 2rem;
+    }
+    .doc-page__text {
+        padding: 20px 30px;
+    }
+    .doc-page__photo {
+        margin: auto;
+    }
+}
+@media screen and (max-width: 576px){
+	.doc-page__name {
+        font-size: 1.7rem;
+    }
+}
+@media screen and (max-width: 420px) {
+	.doc-page {
+        padding: 30px 0px;
+    }
+    .doc-page__form-container {
+        padding: 30px 15px;
+    }
+    .doc-page__text-point-title span {
+        font-size: 1.3rem;
+    }
+    .doc-page__text {
+        padding: 20px 20px;
+    }
+    .doc-page__form--bt>.form-elem.button {
+        color: white;
+        background-color: var(--main-color);
+        position: static;
+        max-width: 140px;
+    }
+}
+@media screen and (max-width: 325px) {
+	.doc-page__photo {
+        width: 100%;
+        max-width: 300px;
+    }
+}
