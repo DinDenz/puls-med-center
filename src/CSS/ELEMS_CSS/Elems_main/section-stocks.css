@@ -123,8 +123,6 @@
     flex:40%;
     padding: 0 10px;
 }
-.feedback-main {
-}
 .feedback-main__row{
     display: flex;
     flex-direction: column;
@@ -159,12 +157,12 @@
         padding: 10px 0px;
         font-size: 1.1rem;
     }
-    .feedback-main__text {
+    /*.feedback-main__text {
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 5;
         -webkit-box-orient: vertical;
-    }
+    }*/
     .cards-description {
         padding: 5px 15px 25px 15px;
     }

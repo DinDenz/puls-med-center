@@ -103,3 +103,8 @@
 .textarea-review:placeholder {
     color:var(--middle-opacity-black-color);
 }
+@media screen and (max-width:576px) {
+    .section-rev-list {
+        padding: 0 20px;
+    }
+}

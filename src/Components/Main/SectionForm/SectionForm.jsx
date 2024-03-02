@@ -26,7 +26,7 @@ export default function SectionForm() {
     setIsSelectValid,
     includeTextarea: false,
   });
-  //обработка самбима
+  //обработка сабмита
   const handleSubmit = (e) => {
     e.preventDefault();
     if (e.nativeEvent.submitter.name !== 'submit') return   //условие написал так как онсабмит происходил при каждом изменении значения поля формы, a так он проиходит только при клике на сабмит
