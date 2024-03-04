@@ -32,7 +32,7 @@ export default function Stocks() {
                 <div className="cards__row">
                     {stocks.map((stock) => (
                         <div className="cards-col" key={stock.id}>
-                            <Link  to="/otzivy">
+                            <Link to="/otzivy">
                                 <div className="cards-img">
                                     <img src={stock.img} alt="image" />
                                 </div>
