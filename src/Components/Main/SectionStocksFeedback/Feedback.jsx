@@ -14,13 +14,16 @@ export default function Feedback() {
             text: "Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60."
         },
     ]
+    function clickLinkHandler() {
+        document.documentElement.scrollIntoView({ behavior: "smooth" });
+    }
     return (
         <div className="feedback">
             <div className="feedback-head">
                 <div className="feedback-head__row">
                     <div className="feedback-head__title font-roboto-bold">Отзывы</div>
                     <div className="feedback-head__link">
-                        <Link to="/otzivy" className="feedback-link">Больше отзывов</Link>
+                        <Link onClick={clickLinkHandler} to="/otzivy" className="feedback-link">Больше отзывов</Link>
                     </div>
                 </div>
             </div>
