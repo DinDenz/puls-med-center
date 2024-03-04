@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import ktImage from './../../../IMG/imagesForSectionStocks/kt_image.jpg';
 import mrtImage from './../../../IMG/imagesForSectionStocks/mrt_image.jpg';
 
@@ -32,7 +31,7 @@ export default function Stocks() {
                 <div className="cards__row">
                     {stocks.map((stock) => (
                         <div className="cards-col" key={stock.id}>
-                            <Link to="/otzivy">
+                            <a href="*">
                                 <div className="cards-img">
                                     <img src={stock.img} alt="image" />
                                 </div>
@@ -44,7 +43,7 @@ export default function Stocks() {
                                         {stock.descr}
                                     </div>
                                 </div>
-                            </Link>
+                            </a>
                         </div>
                     ))}
                 </div>

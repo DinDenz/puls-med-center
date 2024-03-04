@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Feedback() {
     const feedbacks = [
@@ -19,7 +20,7 @@ export default function Feedback() {
                 <div className="feedback-head__row">
                     <div className="feedback-head__title font-roboto-bold">Отзывы</div>
                     <div className="feedback-head__link">
-                        <a href="/otzivy" className="feedback-link">Больше отзывов</a>
+                        <Link to="/otzivy" className="feedback-link">Больше отзывов</Link>
                     </div>
                 </div>
             </div>
