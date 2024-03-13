@@ -276,12 +276,6 @@ input[type="search"]::-webkit-search-decoration {
     justify-content: flex-start;
     gap:10px;
 }
-.menu__item:hover .submenu {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transform: translateY(3px);
-    transform: translateY(3px);
-} 
 
 .menu__item>a {
     display: inline-block;
@@ -308,6 +302,12 @@ input[type="search"]::-webkit-search-decoration {
     transform: translateY(15px);
     transition: visibility 0.2s, opacity 0.3s ease,-webkit-transform 0.3s ease-in-out, transform 0.3s ease-in-out;
     transition-delay: 0.1s;
+}
+.submenu.show {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
 }
 
 .submenu__list {

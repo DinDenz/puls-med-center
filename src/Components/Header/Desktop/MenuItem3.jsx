@@ -1,6 +1,9 @@
-import React from 'react'
+import React from 'react';
+import { useSubmenuToggle } from './../../hooks/useSubmenuToggle';
+
 
 export default function MenuItem3() {
+    const { isShowMenu, showMenu, hideMenu, } = useSubmenuToggle();
     const medicalIssled = {
         col1: [
             {
@@ -51,9 +54,9 @@ export default function MenuItem3() {
     };
 
     return (
-        <div className="menu__item item-3">
-            <a href="#">Диагностика</a>
-            <div className="menu__submenu submenu">
+        <div className="menu__item item-3" onMouseOver={showMenu} onMouseOut={hideMenu}>
+            <a href="#napravleniya">Диагностика</a>
+            <div className={`menu__submenu ${isShowMenu ? 'submenu show' : 'submenu'}`}>
                 <div className='submenu__list-3'>
                     <div className='list3__col'>
                         {medicalIssled.col1.map((item) => (

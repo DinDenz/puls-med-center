@@ -7,7 +7,7 @@ export default function SectionTabs() {
   const [selectedTab, setSelectedTab] = useState('Направления');
 
   return (
-    <div className='section-tabs'>
+    <div className='section-tabs' id='napravleniya'>
       <div className="section-tabs__content">
         <div className="tabs-head">
           <div className="tabs-head__title font-roboto-bold">Наши услуги</div>

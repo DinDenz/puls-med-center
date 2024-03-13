@@ -2,20 +2,18 @@
     padding: 30px 10px 20px 10px;
     position: relative;
 }
+.section-tabs:target {
+    scroll-margin-top: 150px;
+}
 .section-tabs__content{
     display: block;
     max-width: 1150px;
     margin: auto;
 }
-.tabs-head{
-
-}
 .tabs-head__title {
     font-size: 2.6rem;
     letter-spacing: 2px;
     margin-bottom: 20px;
-}
-.tabs-body__nav{
 }
 .tabs-body__items{
     box-sizing: border-box;
