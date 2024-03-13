@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import SectionForm from '../../Main/SectionForm/SectionForm';
+import SectionTabs from '../../Main/SectionTabs/SectionTabs';
 import DocCard from './DocCard';
 import doctors from './DoctorsData';
 import DoctorsFilter from './DoctorsFilter';
@@ -58,7 +59,7 @@ export default function Doctors() {
               ))}
             </div>
           </div>
-
+          <SectionTabs />
           <SectionForm />
         </div>
       </div>

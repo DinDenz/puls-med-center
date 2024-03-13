@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionForm from '../../Main/SectionForm/SectionForm';
+import SectionTabs from '../../Main/SectionTabs/SectionTabs';
 import about_img from "./../../../IMG/about_pic.png";
 
 export default function About() {
@@ -57,7 +58,7 @@ export default function About() {
             </div>
 
           ))}
-
+          <SectionTabs/>
           <SectionForm />
         </div>
       </div>
