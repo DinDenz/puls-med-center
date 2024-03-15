@@ -6,6 +6,7 @@ import Footer from "./Components/Footer/Footer";
 import Otzivy from "./Components/pages/Otzivy/Otzivy";
 import About from "./Components/pages/About/About";
 import Doctors from "./Components/pages/Doctors/Doctors";
+import NapravleniyaPage from './Components/pages/Napravleniya/NapravleniyaPage'
 import IndividualDocPage from "./Components/pages/Doctors/IndividualPage/IndividualDocPage"
 /*import Layout from "./Components/Layout";*/
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/doctors' element={<Doctors />}></Route>
         <Route path='/doctors/:id' element={<IndividualDocPage />}></Route>
         <Route path='/about' element={<About />}></Route>
+        <Route path='/napravleniya/:type' element={<NapravleniyaPage />}></Route>
       </Routes>
       <Footer />
     </div>

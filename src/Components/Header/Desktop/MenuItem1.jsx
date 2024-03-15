@@ -1,5 +1,7 @@
 import React from 'react';
 import { useSubmenuToggle } from './../../hooks/useSubmenuToggle';
+import { Link } from 'react-router-dom';
+import napravleniya from './../../pages/Napravleniya/DataForNapraleniya'
 
 export default function MenuItem1() {
     const { isShowMenu, showMenu, hideMenu, } = useSubmenuToggle();
@@ -9,18 +11,12 @@ export default function MenuItem1() {
             <a href="#napravleniya" onClick={hideMenu}>Направления</a>
             <div className={`menu__submenu ${isShowMenu ? 'submenu show' : 'submenu'}`}>
                 <div className='submenu__list'>
-                    <div className="submenu__item">
-                        <a href="#">Кардиология</a>
-                    </div>
-                    <div className="submenu__item">
-                        <a href="#">Детская кардиология</a>
-                    </div>
-                    <div className="submenu__item">
-                        <a href="#">Беременным</a>
-                    </div>
-                    <div className="submenu__item">
-                        <a href="#">Ревматология</a>
-                    </div>
+                    {napravleniya.map(napr => (
+                        <div className="submenu__item" key={napr.id}>
+                            <Link to={`/napravleniya/${napr.type}`}>{napr.title}</Link>
+                        </div>
+                    ))
+                    }
                 </div>
             </div>
         </div >
