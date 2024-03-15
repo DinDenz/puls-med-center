@@ -7,6 +7,7 @@ export default function MenuItem1() {
     const { isShowMenu, showMenu, hideMenu, } = useSubmenuToggle();
     function clickNavLinkHandler() {
         document.documentElement.scrollIntoView({ behavior: "smooth" });
+        hideMenu();
     }
 
     return (
