@@ -5,6 +5,9 @@ import napravleniya from './../../pages/Napravleniya/DataForNapraleniya'
 
 export default function MenuItem1() {
     const { isShowMenu, showMenu, hideMenu, } = useSubmenuToggle();
+    function clickNavLinkHandler() {
+        document.documentElement.scrollIntoView({ behavior: "smooth" });
+    }
 
     return (
         <div className="menu__item item-1" onMouseOver={showMenu} onMouseOut={hideMenu}>
@@ -13,7 +16,9 @@ export default function MenuItem1() {
                 <div className='submenu__list'>
                     {napravleniya.map(napr => (
                         <div className="submenu__item" key={napr.id}>
-                            <Link to={`/napravleniya/${napr.type}`}>{napr.title}</Link>
+                            <Link
+                                onClick={clickNavLinkHandler}
+                                to={`/napravleniya/${napr.type}`}>{napr.title}</Link>
                         </div>
                     ))
                     }

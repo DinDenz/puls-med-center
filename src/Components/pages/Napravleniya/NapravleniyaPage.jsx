@@ -23,36 +23,22 @@ export default function NapravleniyaPage() {
               <div className="napr-page" key={currentNapravl.id}>
                 <div className="napr-page__text">{currentNapravl.text}</div>
                 <div className="napr-page__table">
-                  <p className="napr-page__table_info">
-                    Стоимость консультации врача
-                  </p>
+                  <p className="napr-page__table_info">Стоимость консультации врача</p>
                   <table className="table">
                     <thead className="table__head">
                       <tr className="table__head_row">
-                        <th className="table__head_row--title">
-                          Услуга
-                        </th>
-                        <th className="table__head_row--cost">
-                          Стоимость
-                        </th>
+                        <th className="table__head_row--title">Услуга</th>
+                        <th className="table__head_row--cost">Стоимость</th>
                       </tr>
                     </thead>
                     <tbody className="table__body">
                       <tr className="table__body_row">
-                        <td>
-                          Первичный прием врача
-                        </td>
-                        <td>
-                          <span>{currentNapravl.price_first} BYN</span>
-                        </td>
+                        <td>Первичный прием врача</td>
+                        <td><span>{currentNapravl.price_first} BYN</span></td>
                       </tr>
                       <tr className="table__body_row">
-                        <td>
-                          Повторный прием врача
-                        </td>
-                        <td>
-                          <span>{currentNapravl.price_second} BYN</span>
-                        </td>
+                        <td>Повторный прием врача</td>
+                        <td><span>{currentNapravl.price_second} BYN</span></td>
                       </tr>
                     </tbody>
                   </table>
