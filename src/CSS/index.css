@@ -56,6 +56,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 @import url("./PAGES_CSS/About.css");
 @import url("./PAGES_CSS/Doctors.css");
 @import url("./PAGES_CSS/IndividualDocPage.css");
+@import url('./PAGES_CSS/NapravleniyaPage.css');
 
 /*-------шрифты------------------------------------------------------------*/
 

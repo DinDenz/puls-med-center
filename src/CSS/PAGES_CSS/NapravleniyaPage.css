@@ -1,0 +1,103 @@
+.napr-title-section {
+    min-height: 250px;
+    position: relative;
+    display: flex;
+}
+.napr-title-section .back {
+    opacity: 0.9;
+}
+.napr-title-section h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    align-self: flex-end;
+    padding: 10px 25px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: white;
+}
+.napr-page {
+    padding: 30px 25px;
+}
+.napr-page__text {
+    color:var(--middle-opacity-black-color);
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.napr-page__table {
+    
+}
+.napr-page__table_info {
+    color:black;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.table {
+    max-width: 700px;
+    width: 100%;
+    border-collapse: collapse;
+    color:var(--middle-opacity-black-color);
+}
+.table__head th {
+    padding: 14px 25px 16px;
+    background-color: #f3f3f3;
+    color: var(--middle-opacity-black-color);
+    text-align: left;
+}
+.table__head_row--title {
+    width: 70%;
+}
+.table__head_row--cost {
+    width: 30%;
+}
+.table__body tr {
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+}
+.table__body td {
+    vertical-align: middle;
+    padding: 14px 25px 15px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+.table__body_row td:last-child {
+    color:var(--main-color);
+    font-size: 1.5rem;
+}
+@media screen and (max-width:992px) {
+    .napr-title-section h1 {
+        font-size: 2.3rem;
+    }
+}
+@media screen and (max-width:768px) {
+    .napr-title-section h1 {
+        font-size: 2.1rem;
+    }
+    .napr-page__table_info {
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:576px) {
+    .table__head {
+        display: none;
+    }
+    .table__body tr {
+        padding: 10px;
+        display: block;
+    }
+    .table__body td {
+        width: 100%;
+        display: block;
+        padding: 0px 5px 5px;
+    }
+    .napr-page__table_info {
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+    .napr-page {
+        padding: 20px 10px;
+    }
+    .napr-title-section h1 {
+        padding: 10px;
+    }
+}
