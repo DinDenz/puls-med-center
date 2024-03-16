@@ -6,22 +6,22 @@ export default function MobBurgerItem({ item, setOpen }) {
     const [isAcOpen, setIsAcOpen] = useState(false);//стэйт для аккордеона
     const iRef = useRef()
 
-    function handlerAcc(event) {
+    function handlerAcc(event) { //клик на стрелку аккордиона
         event.preventDefault();
         setIsAcOpen(!isAcOpen);
+    }
 
-    }
-    function handleClick(event) {
+    function clickLinkHandler() {//клик на ссылку в аккордионе
         setOpen(false);
-    }
-    /*function clickLinkHandler() {
-        setOpen(false); 
         document.documentElement.scrollIntoView({ behavior: "smooth" });
-    }*/ //не удалять(на случай создания отдельной стр направлений)
+    }
+    function clickHandler() {
+        setOpen(false);
+    } 
 
     return (
         <li className="item_1 .font-roboto-thin">
-            <a onClick={handlerAcc} to={item.href}>{item.value}</a>
+            <Link onClick={clickHandler} to={item.href}>{item.value}</Link>
             {item.accordeon && (
                 <>
                     <a className={isAcOpen ? "accordeon-toggle active" : "accordeon-toggle"}
@@ -34,7 +34,7 @@ export default function MobBurgerItem({ item, setOpen }) {
                             <ul>
                                 {Object.entries(item.accordeon).map(([what, url], index) => (
                                     <li key={index} className="item_2">
-                                        <Link onClick={handleClick} to={`/napravleniya/${url}`}>{what}</Link>
+                                        <Link onClick={clickLinkHandler} to={`/napravleniya/${url}`}>{what}</Link>
                                     </li>
                                 ))}
                             </ul>

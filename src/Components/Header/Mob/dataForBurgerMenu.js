@@ -42,5 +42,6 @@ const itemsAc = [
     { id: 4, value: "О нас", href: "/about" },
     { id: 5, value: "Врачи", href: "/doctors" },
     { id: 6, value: "Отзывы", href: "/otzivy" },
+    { id: 7, value: "Главная", href: "/puls-med-center" },
 ]
 export default itemsAc;
