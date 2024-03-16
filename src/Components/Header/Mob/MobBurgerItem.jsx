@@ -6,7 +6,7 @@ export default function MobBurgerItem({ item, setOpen }) {
     const [isAcOpen, setIsAcOpen] = useState(false);//стэйт для аккордеона
     const iRef = useRef()
 
-    function handlerAcc(event) { //клик на стрелку аккордиона
+    function handlerAccord(event) { //раскрытие аккордиона
         event.preventDefault();
         setIsAcOpen(!isAcOpen);
     }
@@ -15,19 +15,19 @@ export default function MobBurgerItem({ item, setOpen }) {
         setOpen(false);
         document.documentElement.scrollIntoView({ behavior: "smooth" });
     }
-    function clickHandler() {
+    function clickHandler() { //клик на ссылку без аккордиона
         setOpen(false);
-    } 
+    }
 
     return (
         <li className="item_1 .font-roboto-thin">
-            <Link onClick={clickHandler} to={item.href}>{item.value}</Link>
+            <Link onClick={item.hasAccondion ? handlerAccord : clickHandler} to={item.href}>{item.value}</Link>
             {item.accordeon && (
                 <>
                     <a className={isAcOpen ? "accordeon-toggle active" : "accordeon-toggle"}
                         href="#"
                         aria-expanded={isAcOpen}
-                        onClick={handlerAcc}></a>
+                        onClick={handlerAccord}></a>
                     <div className="collapse-accordeon"
                         style={isAcOpen ? { height: iRef.current.scrollHeight } : { height: "0px" }}>
                         <div ref={iRef} className="accordeon-body">

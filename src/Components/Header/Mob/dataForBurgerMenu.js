@@ -3,6 +3,7 @@ const itemsAc = [
         id: 0,
         value: "Направления",
         href: "",
+        hasAccondion: true,
         accordeon: {
             "Кардиология": "cardiologiya",
             "Детская кардиология": "detskaya-cardiologiya",
@@ -14,6 +15,7 @@ const itemsAc = [
         id: 1,
         value: "Лабораторные исследования",
         href: "/main",
+        hasAccondion: true,
         accordeon: {
             "Общие анализы": "url",
             "Бихимические исследования": "url2",
@@ -27,6 +29,7 @@ const itemsAc = [
         id: 2,
         value: "Диагностика",
         href: "/main",
+        hasAccondion: true,
         accordeon: {
             "Компьютерная томография": "url",
             "МРТ": "url2",
@@ -38,10 +41,10 @@ const itemsAc = [
             "тридмил-тест": "url8",
         },
     },
-    { id: 3, value: "Контакты", href: "/main" },
-    { id: 4, value: "О нас", href: "/about" },
-    { id: 5, value: "Врачи", href: "/doctors" },
-    { id: 6, value: "Отзывы", href: "/otzivy" },
-    { id: 7, value: "Главная", href: "/puls-med-center" },
+    { id: 3, value: "Контакты", href: "/main", hasAccondion: false },
+    { id: 4, value: "О нас", href: "/about", hasAccondion: false },
+    { id: 5, value: "Врачи", href: "/doctors", hasAccondion: false },
+    { id: 6, value: "Отзывы", href: "/otzivy", hasAccondion: false },
+    { id: 7, value: "Главная", href: "/puls-med-center", hasAccondion: false },
 ]
 export default itemsAc;
