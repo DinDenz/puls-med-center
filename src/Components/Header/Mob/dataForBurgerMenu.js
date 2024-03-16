@@ -2,12 +2,12 @@ const itemsAc = [
     {
         id: 0,
         value: "Направления",
-        href: "/main",
+        href: "",
         accordeon: {
-            "Кардиология": "url",
-            "Детская кардиология": "url2",
-            "Беременным": "url3",
-            "Ревматология": "url4",
+            "Кардиология": "cardiologiya",
+            "Детская кардиология": "detskaya-cardiologiya",
+            "Беременным": "cardiologiya-beremennih",
+            "Ревматология": "revmatologiya",
         },
     },
     {
