@@ -15,7 +15,7 @@ export default function MobContactsDrop() {
                 </div>
             </div>
             <div className="button-mobile-drop">
-                <button className="drop-mob-but font-roboto-medium">запись онлайн</button>
+                <a href='https://talon.by/' className="drop-mob-but font-roboto-medium">запись онлайн</a>
             </div>
 
         </>
