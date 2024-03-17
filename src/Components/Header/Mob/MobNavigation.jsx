@@ -7,7 +7,7 @@ export default function MobNavigation() {
     return (
         <div className="header__tools">
             <div className="button-mobile">
-                <button className="button font-roboto-medium">запись онлайн</button>
+                <a href="https://talon.by/" className="button font-roboto-medium">запись онлайн</a>
             </div>
             <MobSearch />
             <MobContacts />

@@ -41,10 +41,10 @@ const itemsAc = [
             "тридмил-тест": "url8",
         },
     },
-    { id: 3, value: "Контакты", href: "/main", hasAccondion: false },
-    { id: 4, value: "О нас", href: "/about", hasAccondion: false },
-    { id: 5, value: "Врачи", href: "/doctors", hasAccondion: false },
-    { id: 6, value: "Отзывы", href: "/otzivy", hasAccondion: false },
+    { id: 3, value: "О нас", href: "/about", hasAccondion: false },
+    { id: 4, value: "Врачи", href: "/doctors", hasAccondion: false },
+    { id: 5, value: "Отзывы", href: "/otzivy", hasAccondion: false },
+    { id: 6, value: "Контакты", href: "/main", hasAccondion: false },
     { id: 7, value: "Главная", href: "/puls-med-center", hasAccondion: false },
 ]
 export default itemsAc;

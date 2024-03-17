@@ -32,7 +32,8 @@ export default function NavigationRowTop() {
                 <ContactsAll />
             </div>
             <div className="navigation__col navigation__col--button">
-                <button className='button font-roboto-medium'><Icon type="pen" width="21px" height="21px" />запись онлайн</button>
+                <a href="https://talon.by/" className='button font-roboto-medium'>
+                    <Icon type="pen" width="21px" height="21px" />запись онлайн</a>
             </div>
         </div>
     )

@@ -27,7 +27,7 @@ export default function MobBurgerMenu({ itemsAc, open, setOpen }) {
         <div ref={refA} className={open ? 'mob-menu open' : 'mob-menu closed'} onClick={closingClick}>
             <div className="menu__content" onClick={(e) => e.stopPropagation()}>
                 <div className='menu__zapis-btn'>
-                    <button className='button font-roboto-medium'>Запись онлайн</button>
+                    <a href="https://talon.by/" className='button font-roboto-medium'>Запись онлайн</a>
                     </div>
                 <div className='menu__items'>
                     <ul>
