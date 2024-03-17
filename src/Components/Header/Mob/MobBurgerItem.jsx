@@ -11,17 +11,14 @@ export default function MobBurgerItem({ item, setOpen }) {
         setIsAcOpen(!isAcOpen);
     }
 
-    function clickLinkHandler() {//клик на ссылку в аккордионе
+    function clickLinkHandler() {//клик на ссылку в аккордионе или на ссылку без аккордиона
         setOpen(false);
         document.documentElement.scrollIntoView({ behavior: "smooth" });
-    }
-    function clickHandler() { //клик на ссылку без аккордиона
-        setOpen(false);
     }
 
     return (
         <li className="item_1 .font-roboto-thin">
-            <Link onClick={item.hasAccondion ? handlerAccord : clickHandler} to={item.href}>{item.value}</Link>
+            <Link onClick={item.hasAccondion ? handlerAccord : clickLinkHandler} to={item.href}>{item.value}</Link>
             {item.accordeon && (
                 <>
                     <a className={isAcOpen ? "accordeon-toggle active" : "accordeon-toggle"}
