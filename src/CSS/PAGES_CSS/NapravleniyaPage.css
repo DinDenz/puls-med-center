@@ -15,7 +15,7 @@
     letter-spacing: 1px;
     color: white;
 }
-.napr-page {
+.napr-page, .doctors-section {
     padding: 30px 25px;
 }
 .napr-page__text {
@@ -24,7 +24,7 @@
     margin-bottom: 30px;
 }
 
-.napr-page__table_info {
+.napr-page__table_info, .doctors-section>p {
     color:black;
     font-size: 1.8rem;
     font-weight: 700;
@@ -62,6 +62,12 @@
     color:var(--main-color);
     font-size: 1.5rem;
 }
+.doctors-section--docs {
+ display: flex;
+ flex-wrap: wrap;
+ margin-top: 30px;
+}
+
 @media screen and (max-width:992px) {
     .napr-title-section h1 {
         font-size: 2.3rem;
@@ -88,14 +94,17 @@
         display: block;
         padding: 0px 5px 5px;
     }
-    .napr-page__table_info {
-        margin-bottom: 10px;
-        font-size: 1.3rem;
+    .napr-page__table_info, .doctors-section>p {
+        margin-bottom: 15px;
+        font-size: 1.4rem;
     }
-    .napr-page {
+    .napr-page, .doctors-section {
         padding: 20px 10px;
     }
     .napr-title-section h1 {
         padding: 10px;
     }
+    .doctors-section--docs {
+        justify-content: center;
+       }
 }

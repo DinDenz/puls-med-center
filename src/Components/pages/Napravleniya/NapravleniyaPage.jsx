@@ -2,12 +2,15 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import napravleniya from "./DataForNapraleniya";
 import NotFound from '../../common/NotFound';
+import doctors from "./../Doctors/DoctorsData";
+import DocCard from '../Doctors/DocCard';
 
 
 export default function NapravleniyaPage() {
   const { type } = useParams();
   //console.log(useParams());
   const currentNapravl = napravleniya.find(napr => napr.type === type);
+  const currentDocs = doctors.filter(doc => doc.typeSpec === type);
   return (
     <>
       <div className='main'>
@@ -47,6 +50,21 @@ export default function NapravleniyaPage() {
             ) : (
               <NotFound />
             )}
+            <div className="doctors-section">
+              <p>Выбрать специалиста</p>
+              <div className='doctors-section--docs'>
+                {currentDocs.map(doctor => (
+                  <DocCard key={doctor.id}
+                    docID={doctor.id}
+                    name={doctor.name}
+                    specialty={doctor.specialty}
+                    category={doctor.category}
+                    experience={doctor.experience}
+                    photo={doctor.photo}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
